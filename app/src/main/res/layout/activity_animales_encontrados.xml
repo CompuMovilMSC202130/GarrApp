@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimalesEncontrados" >
+
+    <LinearLayout
+        android:id="@+id/barraSuperior"
+        android:layout_width="391dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#31B189"
+        android:orientation="horizontal">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar3"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            app:backgroundTint="#31B189" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:backgroundTint="#31B189"
+            android:foregroundTint="#F8F5F5"
+            app:srcCompat="@drawable/garralogo"
+            app:tint="#F6F1F1"
+            tools:srcCompat="@drawable/barrasuperiorgarralogo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="224dp"
+            android:layout_height="match_parent"
+            android:background="#31B189"
+            android:backgroundTint="#31B189"
+            android:fontFamily="sans-serif"
+            android:text="GarrApp"
+            android:onClick="AnimalesEncontradosActivity"
+            android:textAlignment="center"
+            android:textColor="#FAF3F3"
+            android:textSize="34sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="93dp"
+            android:layout_height="64dp"
+
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrasuperiorlogout"
+            app:tint="#FBF8F8" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="372dp"
+        android:layout_height="259dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="100dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraSuperior">
+
+        <TextView
+            android:id="@+id/textReporte4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lista de Animales encontrados"
+            android:textAlignment="center"
+            android:textColor="#31B189"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="392dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton12"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-3dp">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="ListaReportesActivity"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiormisreportes" />
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            android:onClick="AnimalesEncontradosActivity"
+            app:srcCompat="@drawable/barrainferiorlistas"
+            tools:srcCompat="@drawable/barrainferiorlistas" />
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            android:onClick="PrincipalActivity"
+            app:srcCompat="@drawable/barrainferiorgarra"
+            tools:srcCompat="@drawable/barrainferiorgarra" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            android:onClick="MapsActivity"
+            app:srcCompat="@drawable/barrainferiormapas"
+            tools:srcCompat="@drawable/barrainferiormapas" />
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiornoticias"
+            tools:srcCompat="@drawable/barrainferiornoticias" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

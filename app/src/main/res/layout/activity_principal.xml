@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Principal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="ListaReportesActivity"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiormisreportes" />
+
+        <ImageButton
+            android:id="@+id/imageButton14"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="AnimalesEncontradosActivity"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiorlistas"
+            tools:srcCompat="@drawable/barrainferiorlistas" />
+
+        <ImageButton
+            android:id="@+id/imageButton15"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="PrincipalActivity"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiorgarra"
+            tools:srcCompat="@drawable/barrainferiorgarra" />
+
+        <ImageButton
+            android:id="@+id/imageButton16"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="MapsActivity"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiormapas"
+            tools:srcCompat="@drawable/barrainferiormapas" />
+
+        <ImageButton
+            android:id="@+id/imageButton17"
+            android:layout_width="78dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrainferiornoticias"
+            tools:srcCompat="@drawable/barrainferiornoticias" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/barraSuperior"
+        android:layout_width="391dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#31B189"
+        android:orientation="horizontal">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar3"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            app:backgroundTint="#31B189" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:backgroundTint="#31B189"
+            android:foregroundTint="#F8F5F5"
+            app:srcCompat="@drawable/garralogo"
+            app:tint="#F6F1F1"
+            tools:srcCompat="@drawable/barrasuperiorgarralogo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="224dp"
+            android:layout_height="match_parent"
+            android:background="#31B189"
+            android:backgroundTint="#31B189"
+            android:fontFamily="sans-serif"
+            android:text="GarrApp"
+            android:textAlignment="center"
+            android:textColor="#FAF3F3"
+            android:textSize="34sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="93dp"
+            android:layout_height="64dp"
+
+            android:backgroundTint="#31B189"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/barrasuperiorlogout"
+            app:tint="#FBF8F8" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/layoutInstituciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barraSuperior">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="InstitucionesActivity"
+            android:text="Instituciones Aliadas"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#31B189"
+            android:onClick="ListaReportesActivity"
+            android:text="Tus Reportes"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPrincipalListados"
+        android:layout_width="wrap_content"
+        android:layout_height="114dp"
+        android:layout_below="@id/layoutPrincipalReportes"
+
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textListados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listados"
+            android:textAlignment="center"
+            android:textColor="#31B189"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textListados1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animales Perdidos"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textListados2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animales Encontrados"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPrincipalMapa"
+        android:layout_width="213dp"
+        android:layout_height="78dp"
+
+        android:layout_below="@id/layoutPrincipalListados"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mapa GarrAPP"
+            android:textAlignment="center"
+            android:textColor="#31B189"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textMapa2"
+            android:layout_width="228dp"
+            android:layout_height="44dp"
+            android:text="Ubicación de instituciones aliadas, animales perdidos y encontrados "
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPrincipalNoticias"
+        android:layout_width="241dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/layoutPrincipalMapa"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="77dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textNoticias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Noticias"
+            android:textAlignment="center"
+            android:textColor="#31B189"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textNoticias2"
+            android:layout_width="239dp"
+            android:layout_height="51dp"
+            android:text="Novedades de los animales reportados. Información de interes de las mascotas"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPrincipalReportes"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_below="@id/layoutInstituciones"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textReporte"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="¿Deseas hacer un Reporte?"
+            android:textAlignment="center"
+            android:textColor="#31B189"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textAnimalPerdido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Animal Perdido"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textAnimalEncontrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animal Encontrado"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
