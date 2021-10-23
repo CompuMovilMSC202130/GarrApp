@@ -91,7 +91,7 @@
         android:layout_marginTop="75dp"
         android:backgroundTint="#F6FBF9"
         android:onClick="PrincipalActivity"
-        android:text="IngresarDosTres"
+        android:text="IngresarDosTresC"
         android:textColor="#0E0E0E" />
 
     <Button
