@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/MenulistaReportes"
+        android:icon="@drawable/ic_heart"
+        android:title="Reportes" />
+
+    <item
+        android:id="@+id/MenuAnimalesEncontrados"
+        android:icon="@drawable/ic_list"
+        android:title="Encontrados" />
+    <!---   android:title="@drawable/ic_list" /> -->
+
+
+    <item
+        android:id="@+id/MenuHome"
+        android:icon="@drawable/ic_garr"
+        android:title="Home" />
+    <item
+        android:id="@+id/MenuMapa"
+        android:icon="@drawable/ic_map"
+        android:title="Mapa" />
+    <item
+        android:id="@+id/MenuNoticias"
+        android:icon="@drawable/barrainferiornoticias"
+        android:title="Noticias" />
+
+</menu>
