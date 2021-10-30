@@ -17,7 +17,7 @@ public class Instituciones extends AppCompatActivity {
 
     public void PrincipalActivity(View v)
     {
-        startActivity(new Intent(this,Principal.class));
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 
     public void InstitucionesActivity(View v)
@@ -37,6 +37,6 @@ public class Instituciones extends AppCompatActivity {
 
     public void ListaReportesActivity(View v)
     {
-        startActivity(new Intent(this,ListaReportes.class));
+        startActivity(new Intent(this, TusReportesActivity.class));
     }
 }

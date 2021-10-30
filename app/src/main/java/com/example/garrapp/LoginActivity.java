@@ -10,7 +10,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
@@ -63,6 +62,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
     public void ingresarPressed (View v){
-        startActivity(new Intent(this, Principal.class));
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 }

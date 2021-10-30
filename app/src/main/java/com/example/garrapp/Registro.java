@@ -31,6 +31,6 @@ public class Registro extends AppCompatActivity {
 
     public void ListaReportesActivity(View v)
     {
-        startActivity(new Intent(this,ListaReportes.class));
+        startActivity(new Intent(this, TusReportesActivity.class));
     }
 }

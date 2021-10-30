@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void PrincipalActivity(View v)
     {
-        startActivity(new Intent(this,Principal.class));
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 
     public void InstitucionesActivity(View v)
