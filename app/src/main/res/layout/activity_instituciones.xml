@@ -53,72 +53,18 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/BarraInferior"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:padding="10dp"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/nada"
-            android:onClick="ListaReportesActivity"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_heart"
-            app:tint="@color/gris" />
-
-        <ImageButton
-            android:id="@+id/imageButton14"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/nada"
-            android:onClick="AnimalesEncontradosActivity"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_list"
-            app:tint="@color/gris" />
-
-        <ImageButton
-            android:id="@+id/imageButton15"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/nada"
-            android:onClick="PrincipalActivity"
-            android:padding="2dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_garr"
-            app:tint="@color/custom" />
-
-        <ImageButton
-            android:id="@+id/imageButton16"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/nada"
-            android:onClick="MapsActivity"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_map"
-            app:tint="@color/gris" />
-
-        <ImageButton
-            android:id="@+id/imageButton17"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/nada"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_news"
-            app:tint="@color/gris" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

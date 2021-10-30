@@ -55,6 +55,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="74dp"
@@ -330,17 +331,9 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
-
-
-
-
-
-
-
-
-
 
 
 
