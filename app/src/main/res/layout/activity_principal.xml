@@ -114,12 +114,16 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView"
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:onClick="RealizarReportePressed"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/nada"
                     android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    android:textColor="@color/black"
                     app:srcCompat="@drawable/ic_reporte" />
 
                 <LinearLayout

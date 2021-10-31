@@ -57,4 +57,10 @@ public class PrincipalActivity extends AppCompatActivity {
 
     }
 
+    public void RealizarReportePressed(View v){
+        startActivity(new Intent(this, ReportarActivity.class));
+    }
+
+
+
 }
