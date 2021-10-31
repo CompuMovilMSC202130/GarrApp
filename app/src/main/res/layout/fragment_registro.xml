@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/Usuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent=".8"
@@ -21,11 +21,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/Number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Clave"
+        android:hint="Numero Celular"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -36,40 +38,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/Usuario"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/passw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"
+        android:hint="Contraseña"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number"
         app:layout_constraintWidth_percent=".8" />
 
     <Button
-        android:id="@+id/btn_ingresar"
+        android:id="@+id/btn_registro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_bg"
-        android:onClick="ingresarPressed"
-        android:text="Ingresar"
+        android:onClick="registroPressed"
+        android:text="Registro"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintTop_toBottomOf="@+id/passw"
         app:layout_constraintWidth_percent=".8"></Button>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Olvidó su clave?"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="1"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/pass"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass"
-        android:textColor="@color/teal_700"
-        android:textStyle="normal"    />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

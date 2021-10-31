@@ -3,7 +3,9 @@ package com.example.garrapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -29,7 +31,8 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
-    ViewPager viewPager;
+    ViewPager2 pager2;
+    LoginAdapter adapter;
     FloatingActionButton floatingActionButton2, floatingActionButton1, floatingActionButton3;
     float v =0;
 
@@ -56,28 +59,48 @@ public class LoginActivity extends AppCompatActivity {
         //mAuth=FirebaseAuth.getInstance();
 
         tabLayout=findViewById(R.id.tab_layout);
-        viewPager = findViewById( R.id.view_pager);
-        btn_ingreso = findViewById(R.id.btn_ingresar);
+        pager2=findViewById(R.id.view_pager2);
+     //   btn_ingreso = findViewById(R.id.btn_ingresar);
 
 
-
-        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        login_tab_fragment = inflater.inflate(R.layout.login_tab_fragment, null);
-        Dialog dialog = new Dialog(login_tab_fragment.getContext());
-        email=dialog.findViewById(R.id.email);
-
-
-        floatingActionButton1 = findViewById( R.id.floatingActionButton1);
-        floatingActionButton2 = findViewById( R.id.floatingActionButton2);
-        floatingActionButton3 = findViewById( R.id.floatingActionButton3);
+        FragmentManager fm = getSupportFragmentManager();
+        adapter = new LoginAdapter(fm,getLifecycle());
+        pager2.setAdapter(adapter);
 
         tabLayout.addTab(tabLayout.newTab().setText("Ingreso"));
         tabLayout.addTab(tabLayout.newTab().setText("Registro"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                pager2.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        pager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                tabLayout.selectTab(tabLayout.getTabAt(position));
+            }
+        });
+
+        
+
+        floatingActionButton1 = findViewById( R.id.floatingActionButton1);
+        floatingActionButton2 = findViewById( R.id.floatingActionButton2);
+        floatingActionButton3 = findViewById( R.id.floatingActionButton3);
+
 
         floatingActionButton1.setTranslationY(300);
         floatingActionButton2.setTranslationY(300);

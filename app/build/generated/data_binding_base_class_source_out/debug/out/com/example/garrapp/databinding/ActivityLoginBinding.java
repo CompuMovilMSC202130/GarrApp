@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 import com.example.garrapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -44,14 +44,14 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final TabLayout tabLayout;
 
   @NonNull
-  public final ViewPager viewPager;
+  public final ViewPager2 viewPager2;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout constraintLayout,
       @NonNull FloatingActionButton floatingActionButton1,
       @NonNull FloatingActionButton floatingActionButton2,
       @NonNull FloatingActionButton floatingActionButton3, @NonNull ImageView imageView3,
-      @NonNull ImageView imageView4, @NonNull TabLayout tabLayout, @NonNull ViewPager viewPager) {
+      @NonNull ImageView imageView4, @NonNull TabLayout tabLayout, @NonNull ViewPager2 viewPager2) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.floatingActionButton1 = floatingActionButton1;
@@ -60,7 +60,7 @@ public final class ActivityLoginBinding implements ViewBinding {
     this.imageView3 = imageView3;
     this.imageView4 = imageView4;
     this.tabLayout = tabLayout;
-    this.viewPager = viewPager;
+    this.viewPager2 = viewPager2;
   }
 
   @Override
@@ -132,15 +132,15 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.view_pager;
-      ViewPager viewPager = ViewBindings.findChildViewById(rootView, id);
-      if (viewPager == null) {
+      id = R.id.view_pager2;
+      ViewPager2 viewPager2 = ViewBindings.findChildViewById(rootView, id);
+      if (viewPager2 == null) {
         break missingId;
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, constraintLayout,
           floatingActionButton1, floatingActionButton2, floatingActionButton3, imageView3,
-          imageView4, tabLayout, viewPager);
+          imageView4, tabLayout, viewPager2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
