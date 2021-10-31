@@ -7,7 +7,6 @@
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="31" />
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -38,7 +37,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.GarrAPP" >
-
+        <activity
+            android:name="com.example.garrapp.ReportarEncontradoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.garrapp.ReportarPerdidoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.garrapp.ReportarActivity"
+            android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

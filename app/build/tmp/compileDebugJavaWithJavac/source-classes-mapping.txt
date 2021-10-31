@@ -1,15 +1,21 @@
+com/example/garrapp/databinding/ActivityReportarEncontradoBinding.java
+ com.example.garrapp.databinding.ActivityReportarEncontradoBinding
 com/example/garrapp/databinding/TusreportesperdidosTabFragmentBinding.java
  com.example.garrapp.databinding.TusreportesperdidosTabFragmentBinding
+com/example/garrapp/ReportarEncontradoActivity.java
+ com.example.garrapp.ReportarEncontradoActivity
 com/example/garrapp/databinding/ActivityMapsBinding.java
  com.example.garrapp.databinding.ActivityMapsBinding
 com/example/garrapp/InstitucionesAliadasActivity.java
  com.example.garrapp.InstitucionesAliadasActivity
-com/example/garrapp/databinding/LoginTabFragmentBinding.java
- com.example.garrapp.databinding.LoginTabFragmentBinding
+com/example/garrapp/databinding/ActivityListadosBinding.java
+ com.example.garrapp.databinding.ActivityListadosBinding
 com/example/garrapp/databinding/ActivityMainBinding.java
  com.example.garrapp.databinding.ActivityMainBinding
 com/example/garrapp/LoginTabFragment.java
  com.example.garrapp.LoginTabFragment
+com/example/garrapp/ReportarActivity.java
+ com.example.garrapp.ReportarActivity
 com/example/garrapp/ListadosActivity.java
  com.example.garrapp.ListadosActivity
  com.example.garrapp.ListadosActivity$1
@@ -20,6 +26,8 @@ com/example/garrapp/TusReportesActivity.java
  com.example.garrapp.TusReportesActivity$1
 com/example/garrapp/databinding/PerdidosTabFragmentBinding.java
  com.example.garrapp.databinding.PerdidosTabFragmentBinding
+com/example/garrapp/ReportarPerdidoActivity.java
+ com.example.garrapp.ReportarPerdidoActivity
 com/example/garrapp/PerdidosTabFragment.java
  com.example.garrapp.PerdidosTabFragment
 com/example/garrapp/databinding/ActivityMaps2Binding.java
@@ -36,6 +44,8 @@ com/example/garrapp/AnimalesEncontrados.java
  com.example.garrapp.AnimalesEncontrados
 com/example/garrapp/databinding/ActivityTusreportesBinding.java
  com.example.garrapp.databinding.ActivityTusreportesBinding
+com/example/garrapp/databinding/ActivityReportarPerdidoBinding.java
+ com.example.garrapp.databinding.ActivityReportarPerdidoBinding
 com/example/garrapp/ListasAdapter.java
  com.example.garrapp.ListasAdapter
 com/example/garrapp/TusReportesAdapter.java
@@ -52,6 +62,8 @@ com/example/garrapp/MapsActivity.java
  com.example.garrapp.MapsActivity$5
  com.example.garrapp.MapsActivity$6
  com.example.garrapp.MapsActivity$7
+com/example/garrapp/databinding/ActivityReportarBinding.java
+ com.example.garrapp.databinding.ActivityReportarBinding
 com/example/garrapp/databinding/ActivityNoticiasBinding.java
  com.example.garrapp.databinding.ActivityNoticiasBinding
 com/example/garrapp/PrincipalActivity.java
@@ -83,5 +95,5 @@ com/example/garrapp/LoginAdapter.java
  com.example.garrapp.LoginAdapter
 com/example/garrapp/ListasTabFragment.java
  com.example.garrapp.ListasTabFragment
-com/example/garrapp/databinding/ActivityListadosBinding.java
- com.example.garrapp.databinding.ActivityListadosBinding
+com/example/garrapp/databinding/LoginTabFragmentBinding.java
+ com.example.garrapp.databinding.LoginTabFragmentBinding

@@ -132,6 +132,10 @@
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\iniciocandado.xml"
     },
     {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_reportar.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_reportar.xml"
+    },
+    {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_inicioperson.xml.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\inicioperson.xml"
     },
@@ -230,6 +234,10 @@
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_noticias.xml.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_noticias.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_reportar_perdido.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_reportar_perdido.xml"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -346,6 +354,10 @@
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_logout.xml.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\ic_logout.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_reportar_encontrado.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_reportar_encontrado.xml"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_heart.xml.flat",
