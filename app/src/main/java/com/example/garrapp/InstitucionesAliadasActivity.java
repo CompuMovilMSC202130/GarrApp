@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Instituciones extends AppCompatActivity {
+public class InstitucionesAliadasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_instituciones);
+        setContentView(R.layout.activity_instituciones_aliadas);
     }
 
 
@@ -22,7 +22,7 @@ public class Instituciones extends AppCompatActivity {
 
     public void InstitucionesActivity(View v)
     {
-        startActivity(new Intent(this,Instituciones.class));
+        startActivity(new Intent(this, InstitucionesAliadasActivity.class));
     }
 
     public void MapsActivity(View v)

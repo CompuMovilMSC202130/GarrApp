@@ -21,7 +21,7 @@ public class AnimalesEncontrados extends AppCompatActivity {
 
     public void InstitucionesActivity(View v)
     {
-        startActivity(new Intent(this,Instituciones.class));
+        startActivity(new Intent(this, InstitucionesAliadasActivity.class));
     }
 
     public void MapsActivity(View v)

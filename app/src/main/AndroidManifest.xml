@@ -44,7 +44,7 @@
             android:name=".AnimalesEncontrados"
             android:exported="true" />
         <activity
-            android:name=".Instituciones"
+            android:name=".InstitucionesAliadasActivity"
             android:exported="true" />
         <activity
             android:name=".PrincipalActivity"
