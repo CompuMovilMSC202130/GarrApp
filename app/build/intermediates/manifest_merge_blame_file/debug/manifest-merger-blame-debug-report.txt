@@ -1,0 +1,162 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.garrapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml
+10    <!--
+11         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+12         Google Maps Android API v2, but you must specify either coarse or fine
+13         location permissions for the "MyLocation" functionality.
+14    -->
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:9:5-79
+15-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:9:22-76
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:10:5-81
+16-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:10:22-78
+17
+18    <!-- Include required permissions for Google Maps API to run. -->
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+19-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+20    <uses-permission android:name="android.permission.INTERNET" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+20-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:22-64
+21
+22    <uses-feature
+22-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+23        android:glEsVersion="0x00020000"
+23-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+24        android:required="true" />
+24-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+25
+26    <application
+26-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:12:5-61:19
+27        android:allowBackup="true"
+27-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:13:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\255d63c0f9f8f5d12ab3191ffb377750\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:14:9-43
+31        android:label="@string/app_name"
+31-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:15:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:16:9-54
+33        android:supportsRtl="true"
+33-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:17:9-35
+34        android:testOnly="true"
+35        android:theme="@style/Theme.GarrAPP" >
+35-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:18:9-45
+36        <meta-data
+36-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:19:9-21:55
+37            android:name="com.google.android.geo.API_KEY"
+37-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:20:13-58
+38            android:value="@string/google_maps_key" />
+38-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:21:13-52
+39
+40        <activity
+40-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:23:9-26:59
+41            android:name="com.example.garrapp.MapsActivity"
+41-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:24:13-41
+42            android:exported="false"
+42-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:25:13-37
+43            android:label="@string/title_activity_maps" />
+43-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:26:13-56
+44        <activity
+44-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:27:9-29:39
+45            android:name="com.example.garrapp.TusReportesActivity"
+45-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:28:13-48
+46            android:exported="true" />
+46-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:29:13-36
+47        <activity
+47-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:30:9-32:39
+48            android:name="com.example.garrapp.AnimalesEncontrados"
+48-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:31:13-48
+49            android:exported="true" />
+49-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:32:13-36
+50        <activity
+50-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:33:9-35:39
+51            android:name="com.example.garrapp.InstitucionesAliadasActivity"
+51-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:34:13-57
+52            android:exported="true" />
+52-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:35:13-36
+53        <activity
+53-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:36:9-38:39
+54            android:name="com.example.garrapp.PrincipalActivity"
+54-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:37:13-46
+55            android:exported="true" />
+55-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:38:13-36
+56        <activity
+56-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:39:9-41:39
+57            android:name="com.example.garrapp.Registro"
+57-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:40:13-37
+58            android:exported="true" />
+58-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:41:13-36
+59        <activity
+59-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:42:9-44:39
+60            android:name="com.example.garrapp.MainActivity"
+60-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:43:13-41
+61            android:exported="true" />
+61-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:44:13-36
+62        <activity
+62-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:45:9-47:39
+63            android:name="com.example.garrapp.NoticiasActivity"
+63-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:46:13-45
+64            android:exported="true" />
+64-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:47:13-36
+65        <activity
+65-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:48:9-50:39
+66            android:name="com.example.garrapp.ListadosActivity"
+66-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:49:13-45
+67            android:exported="true" />
+67-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:50:13-36
+68        <activity
+68-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:52:9-60:20
+69            android:name="com.example.garrapp.LoginActivity"
+69-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:53:13-42
+70            android:exported="true" >
+70-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:54:13-36
+71            <intent-filter>
+71-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:55:13-59:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:56:17-69
+72-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:56:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:58:17-77
+74-->D:\Usuarios\Ingrid\AndroidStudioProjects\GarrApp\app\src\main\AndroidManifest.xml:58:27-74
+75            </intent-filter>
+76        </activity>
+77        <!-- Needs to be explicitly declared on P+ -->
+78        <uses-library
+78-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+79            android:name="org.apache.http.legacy"
+79-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+80            android:required="false" />
+80-->[com.google.android.gms:play-services-maps:17.0.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\6c6aa27b0e8af307a5b8632a4ea7ce3c\transformed\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+81
+82        <activity
+82-->[com.google.android.gms:play-services-base:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\2741ab75c4ca9c5a4fed7205aeaaa3ac\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+83            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+83-->[com.google.android.gms:play-services-base:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\2741ab75c4ca9c5a4fed7205aeaaa3ac\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+84            android:exported="false"
+84-->[com.google.android.gms:play-services-base:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\2741ab75c4ca9c5a4fed7205aeaaa3ac\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+85            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+85-->[com.google.android.gms:play-services-base:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\2741ab75c4ca9c5a4fed7205aeaaa3ac\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+86
+87        <meta-data
+87-->[com.google.android.gms:play-services-basement:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\30df76c4de37f3632720df7fe234676e\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+88            android:name="com.google.android.gms.version"
+88-->[com.google.android.gms:play-services-basement:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\30df76c4de37f3632720df7fe234676e\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+89            android:value="@integer/google_play_services_version" />
+89-->[com.google.android.gms:play-services-basement:17.5.0] D:\Usuarios\Ingrid\.gradle\caches\transforms-3\30df76c4de37f3632720df7fe234676e\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+90    </application>
+91
+92</manifest>

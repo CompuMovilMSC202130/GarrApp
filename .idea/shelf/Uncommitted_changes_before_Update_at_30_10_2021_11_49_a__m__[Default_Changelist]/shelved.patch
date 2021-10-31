@@ -1,0 +1,708 @@
+Index: app/src/main/res/layout/activity_lista_reportes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".ListaReportes\">\r\n\r\n    <RelativeLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        tools:context=\".Instituciones\"\r\n        tools:layout_editor_absoluteX=\"0dp\">\r\n\r\n        <LinearLayout\r\n            android:id=\"@+id/barraSuperior\"\r\n            android:layout_width=\"391dp\"\r\n            android:layout_height=\"61dp\"\r\n            android:backgroundTint=\"#31B189\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <com.google.android.material.bottomappbar.BottomAppBar\r\n                android:id=\"@+id/bottomAppBar3\"\r\n                style=\"@style/Widget.MaterialComponents.BottomAppBar.Colored\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_gravity=\"bottom\"\r\n                android:layout_weight=\"1\"\r\n                app:backgroundTint=\"#31B189\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton3\"\r\n                android:layout_width=\"71dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:adjustViewBounds=\"false\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:foregroundTint=\"#F8F5F5\"\r\n                app:srcCompat=\"@drawable/garralogo\"\r\n                app:tint=\"#F6F1F1\"\r\n                tools:srcCompat=\"@drawable/barrasuperiorgarralogo\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView\"\r\n                android:layout_width=\"224dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:background=\"#31B189\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:fontFamily=\"sans-serif\"\r\n                android:text=\"GarrApp\"\r\n                android:textAlignment=\"center\"\r\n                android:textColor=\"#FAF3F3\"\r\n                android:textSize=\"34sp\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton5\"\r\n                android:layout_width=\"93dp\"\r\n                android:layout_height=\"64dp\"\r\n\r\n                android:backgroundTint=\"#31B189\"\r\n                android:scaleType=\"fitCenter\"\r\n                app:srcCompat=\"@drawable/barrasuperiorlogout\"\r\n                app:tint=\"#FBF8F8\" />\r\n\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:id=\"@+id/listaInstituciones\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_below=\"@id/Layouttexto\"\r\n            android:layout_marginLeft=\"130dp\"\r\n            android:layout_marginTop=\"200dp\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView2\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:text=\"Reporte 1\"\r\n                android:textSize=\"24sp\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView3\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:text=\"Reporte 2\"\r\n                android:textSize=\"24sp\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView4\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:text=\"Reporte 3\"\r\n                android:textSize=\"24sp\" />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_below=\"@id/listaInstituciones\"\r\n            android:layout_marginTop=\"100dp\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton9\"\r\n                android:layout_width=\"78dp\"\r\n                android:layout_height=\"56dp\"\r\n                android:layout_weight=\"1\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:onClick=\"ListaReportesActivity\"\r\n                android:scaleType=\"fitCenter\"\r\n                app:srcCompat=\"@drawable/barrainferiormisreportes\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton14\"\r\n                android:layout_width=\"78dp\"\r\n                android:layout_height=\"56dp\"\r\n                android:layout_weight=\"1\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:onClick=\"AnimalesEncontradosActivity\"\r\n                android:scaleType=\"fitCenter\"\r\n                app:srcCompat=\"@drawable/barrainferiorlistas\"\r\n                tools:srcCompat=\"@drawable/barrainferiorlistas\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton15\"\r\n                android:layout_width=\"78dp\"\r\n                android:layout_height=\"56dp\"\r\n                android:layout_weight=\"1\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:onClick=\"PrincipalActivity\"\r\n                android:scaleType=\"fitCenter\"\r\n                app:srcCompat=\"@drawable/barrainferiorgarra\"\r\n                tools:srcCompat=\"@drawable/barrainferiorgarra\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton16\"\r\n                android:layout_width=\"78dp\"\r\n                android:layout_height=\"56dp\"\r\n                android:layout_weight=\"1\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:onClick=\"MapsActivity\"\r\n                android:scaleType=\"fitCenter\"\r\n                app:srcCompat=\"@drawable/barrainferiormapas\"\r\n                tools:srcCompat=\"@drawable/barrainferiormapas\" />\r\n\r\n            <ImageButton\r\n                android:id=\"@+id/imageButton17\"\r\n                android:layout_width=\"78dp\"\r\n                android:layout_height=\"56dp\"\r\n                android:layout_weight=\"1\"\r\n                android:backgroundTint=\"#31B189\"\r\n                android:scaleType=\"fitCenter\"\r\n                app:srcCompat=\"@drawable/barrainferiornoticias\"\r\n                tools:srcCompat=\"@drawable/barrainferiornoticias\" />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:id=\"@+id/Layouttexto\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_below=\"@id/barraSuperior\"\r\n            android:layout_alignParentEnd=\"true\"\r\n            android:layout_marginTop=\"50dp\"\r\n            android:layout_marginEnd=\"160dp\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textReporte2\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"1\"\r\n                android:text=\"Lista de Reportes\"\r\n                android:textAlignment=\"center\"\r\n                android:textColor=\"#31B189\"\r\n                android:textStyle=\"bold\"\r\n                tools:layout_editor_absoluteX=\"95dp\"\r\n                tools:layout_editor_absoluteY=\"26dp\" />\r\n\r\n        </LinearLayout>\r\n\r\n    </RelativeLayout>\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_lista_reportes.xml b/app/src/main/res/layout/activity_lista_reportes.xml
+--- a/app/src/main/res/layout/activity_lista_reportes.xml	(revision 335d0d4d9bed46846b8eff8945bfac453617ca9c)
++++ b/app/src/main/res/layout/activity_lista_reportes.xml	(date 1635167569932)
+@@ -6,179 +6,119 @@
+     android:layout_height="match_parent"
+     tools:context=".ListaReportes">
+ 
+-    <RelativeLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        tools:context=".Instituciones"
+-        tools:layout_editor_absoluteX="0dp">
+-
+-        <LinearLayout
+-            android:id="@+id/barraSuperior"
+-            android:layout_width="391dp"
+-            android:layout_height="61dp"
+-            android:backgroundTint="#31B189"
+-            android:orientation="horizontal">
+-
+-            <com.google.android.material.bottomappbar.BottomAppBar
+-                android:id="@+id/bottomAppBar3"
+-                style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_gravity="bottom"
+-                android:layout_weight="1"
+-                app:backgroundTint="#31B189" />
++    <LinearLayout
++        android:id="@+id/barraSuperior"
++        android:layout_width="match_parent"
++        android:layout_height="65dp"
++        android:background="@color/custom"
++        android:orientation="horizontal"
++        android:paddingTop="10dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton3"
+-                android:layout_width="71dp"
+-                android:layout_height="match_parent"
+-                android:adjustViewBounds="false"
+-                android:backgroundTint="#31B189"
+-                android:foregroundTint="#F8F5F5"
+-                app:srcCompat="@drawable/garralogo"
+-                app:tint="#F6F1F1"
+-                tools:srcCompat="@drawable/barrasuperiorgarralogo" />
++        <ImageButton
++            android:id="@+id/imageButton3"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:paddingHorizontal="20dp"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_logo"
++            app:tint="@color/white" />
+ 
+-            <TextView
+-                android:id="@+id/textView"
+-                android:layout_width="224dp"
+-                android:layout_height="match_parent"
+-                android:background="#31B189"
+-                android:backgroundTint="#31B189"
+-                android:fontFamily="sans-serif"
+-                android:text="GarrApp"
+-                android:textAlignment="center"
+-                android:textColor="#FAF3F3"
+-                android:textSize="34sp" />
++        <TextView
++            android:id="@+id/textView"
++            android:layout_width="wrap_content"
++            android:layout_height="match_parent"
++            android:layout_weight="2"
++            android:gravity="center"
++            android:text="@string/app_name"
++            android:textColor="@color/white"
++            android:textSize="24sp"
++            android:textStyle="bold" />
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton5"
+-                android:layout_width="93dp"
+-                android:layout_height="64dp"
+-
+-                android:backgroundTint="#31B189"
+-                android:scaleType="fitCenter"
+-                app:srcCompat="@drawable/barrasuperiorlogout"
+-                app:tint="#FBF8F8" />
++        <ImageButton
++            android:id="@+id/imageButton5"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:paddingHorizontal="20dp"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_logout"
++            app:tint="@color/white" />
+ 
+-        </LinearLayout>
++    </LinearLayout>
+ 
+-        <LinearLayout
+-            android:id="@+id/listaInstituciones"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_below="@id/Layouttexto"
+-            android:layout_marginLeft="130dp"
+-            android:layout_marginTop="200dp"
+-            android:orientation="vertical">
+-
+-            <TextView
+-                android:id="@+id/textView2"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:text="Reporte 1"
+-                android:textSize="24sp" />
+-
+-            <TextView
+-                android:id="@+id/textView3"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:text="Reporte 2"
+-                android:textSize="24sp" />
+-
+-            <TextView
+-                android:id="@+id/textView4"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:text="Reporte 3"
+-                android:textSize="24sp" />
+-        </LinearLayout>
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content"
+-            android:layout_below="@id/listaInstituciones"
+-            android:layout_marginTop="100dp"
+-            android:orientation="horizontal">
++
++    <LinearLayout
++        android:id="@+id/BarraInferior"
++        android:layout_width="match_parent"
++        android:layout_height="75dp"
++        android:background="@color/white"
++        android:orientation="horizontal"
++        android:padding="10dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent">
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton9"
+-                android:layout_width="78dp"
+-                android:layout_height="56dp"
+-                android:layout_weight="1"
+-                android:backgroundTint="#31B189"
+-                android:onClick="ListaReportesActivity"
+-                android:scaleType="fitCenter"
+-                app:srcCompat="@drawable/barrainferiormisreportes" />
++        <ImageButton
++            android:id="@+id/imageButton9"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:onClick="ListaReportesActivity"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_heart"
++            app:tint="@color/gris" />
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton14"
+-                android:layout_width="78dp"
+-                android:layout_height="56dp"
+-                android:layout_weight="1"
+-                android:backgroundTint="#31B189"
+-                android:onClick="AnimalesEncontradosActivity"
+-                android:scaleType="fitCenter"
+-                app:srcCompat="@drawable/barrainferiorlistas"
+-                tools:srcCompat="@drawable/barrainferiorlistas" />
++        <ImageButton
++            android:id="@+id/imageButton14"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:onClick="AnimalesEncontradosActivity"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_list"
++            app:tint="@color/gris" />
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton15"
+-                android:layout_width="78dp"
+-                android:layout_height="56dp"
+-                android:layout_weight="1"
+-                android:backgroundTint="#31B189"
+-                android:onClick="PrincipalActivity"
+-                android:scaleType="fitCenter"
+-                app:srcCompat="@drawable/barrainferiorgarra"
+-                tools:srcCompat="@drawable/barrainferiorgarra" />
++        <ImageButton
++            android:id="@+id/imageButton15"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:onClick="PrincipalActivity"
++            android:padding="2dp"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_garr"
++            app:tint="@color/custom" />
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton16"
+-                android:layout_width="78dp"
+-                android:layout_height="56dp"
+-                android:layout_weight="1"
+-                android:backgroundTint="#31B189"
+-                android:onClick="MapsActivity"
+-                android:scaleType="fitCenter"
+-                app:srcCompat="@drawable/barrainferiormapas"
+-                tools:srcCompat="@drawable/barrainferiormapas" />
++        <ImageButton
++            android:id="@+id/imageButton16"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:onClick="MapsActivity"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_map"
++            app:tint="@color/gris" />
+ 
+-            <ImageButton
+-                android:id="@+id/imageButton17"
+-                android:layout_width="78dp"
+-                android:layout_height="56dp"
+-                android:layout_weight="1"
+-                android:backgroundTint="#31B189"
+-                android:scaleType="fitCenter"
+-                app:srcCompat="@drawable/barrainferiornoticias"
+-                tools:srcCompat="@drawable/barrainferiornoticias" />
+-        </LinearLayout>
+-
+-        <LinearLayout
+-            android:id="@+id/Layouttexto"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_below="@id/barraSuperior"
+-            android:layout_alignParentEnd="true"
+-            android:layout_marginTop="50dp"
+-            android:layout_marginEnd="160dp"
+-            android:orientation="horizontal">
+-
+-            <TextView
+-                android:id="@+id/textReporte2"
+-                android:layout_width="match_parent"
+-                android:layout_height="match_parent"
+-                android:layout_weight="1"
+-                android:text="Lista de Reportes"
+-                android:textAlignment="center"
+-                android:textColor="#31B189"
+-                android:textStyle="bold"
+-                tools:layout_editor_absoluteX="95dp"
+-                tools:layout_editor_absoluteY="26dp" />
+-
+-        </LinearLayout>
++        <ImageButton
++            android:id="@+id/imageButton17"
++            android:layout_width="0dp"
++            android:layout_height="match_parent"
++            android:layout_weight="1"
++            android:backgroundTint="@color/nada"
++            android:scaleType="fitCenter"
++            app:srcCompat="@drawable/ic_news"
++            app:tint="@color/gris" />
++    </LinearLayout>
+ 
+-    </RelativeLayout>
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n}\r\n\r\nandroid {\r\n    compileSdk 31\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.garrapp\"\r\n        minSdk 21\r\n        targetSdk 31\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    buildFeatures {\r\n        viewBinding true\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.appcompat:appcompat:1.3.1'\r\n    implementation 'com.google.android.material:material:1.4.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'\r\n    implementation 'com.google.android.gms:play-services-maps:17.0.0'\r\n    testImplementation 'junit:junit:4.+'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 335d0d4d9bed46846b8eff8945bfac453617ca9c)
++++ b/app/build.gradle	(date 1635610862460)
+@@ -34,6 +34,7 @@
+ 
+     implementation 'androidx.appcompat:appcompat:1.3.1'
+     implementation 'com.google.android.material:material:1.4.0'
++    implementation 'com.google.android.material:material:1.0.0'
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+     testImplementation 'junit:junit:4.+'
+Index: app/src/main/res/layout/activity_principal.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Principal\">\r\n\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/barraSuperior\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"65dp\"\r\n        android:background=\"@color/custom\"\r\n        android:orientation=\"horizontal\"\r\n        android:paddingTop=\"10dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton3\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:paddingHorizontal=\"20dp\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_logo\"\r\n            app:tint=\"@color/white\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"2\"\r\n            android:gravity=\"center\"\r\n            android:text=\"@string/app_name\"\r\n            android:textColor=\"@color/white\"\r\n            android:textSize=\"24sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton5\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:paddingHorizontal=\"20dp\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_logout\"\r\n            app:tint=\"@color/white\" />\r\n\r\n    </LinearLayout>\r\n\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"vertical\"\r\n        android:padding=\"20dp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/BarraInferior\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/barraSuperior\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <Button\r\n                android:id=\"@+id/button\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"1\"\r\n                android:layout_marginRight=\"10dp\"\r\n                android:backgroundTint=\"@color/custom\"\r\n                android:drawableLeft=\"@drawable/ic_aliados\"\r\n                android:drawableTint=\"@color/white\"\r\n                android:text=\"Aliados\" />\r\n\r\n            <Button\r\n                android:id=\"@+id/button2\"\r\n                android:layout_width=\"0dp\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"1\"\r\n                android:layout_marginLeft=\"10dp\"\r\n                android:backgroundTint=\"@color/custom\"\r\n                android:drawableLeft=\"@drawable/ic_heart\"\r\n                android:drawableTint=\"@color/white\"\r\n                android:text=\"Tus reportes\" />\r\n        </LinearLayout>\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TextView\r\n                android:layout_marginTop=\"30dp\"\r\n                android:id=\"@+id/textView9\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:textColor=\"@color/custom\"\r\n                android:textStyle=\"bold\"\r\n                android:textSize=\"18sp\"\r\n                android:text=\"Realizar un reporte\" />\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\">\r\n\r\n                <ImageView\r\n                    android:id=\"@+id/imageView\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:padding=\"15dp\"\r\n                    android:layout_weight=\"1\"\r\n                    app:srcCompat=\"@drawable/ic_reporte\" />\r\n\r\n                <LinearLayout\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"2\"\r\n                    android:orientation=\"vertical\">\r\n\r\n                    <Button\r\n                        android:id=\"@+id/button3\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_weight=\"1\"\r\n                        android:backgroundTint=\"@color/nada\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:text=\"Animal perdido\"\r\n                        android:textAlignment=\"viewStart\"\r\n                        android:textAllCaps=\"false\" />\r\n\r\n                    <Button\r\n                        android:id=\"@+id/button6\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_weight=\"1\"\r\n                        android:backgroundTint=\"@color/nada\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:text=\"Animal encontrado\"\r\n                        android:textAlignment=\"viewStart\"\r\n                        android:textAllCaps=\"false\" />\r\n                </LinearLayout>\r\n\r\n            </LinearLayout>\r\n        </LinearLayout>\r\n\r\n        <View\r\n            android:id=\"@+id/divider1\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"3dp\"\r\n            android:background=\"@color/custom\" />\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView11\"\r\n                android:layout_marginTop=\"10dp\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:textColor=\"@color/custom\"\r\n                android:textStyle=\"bold\"\r\n                android:textSize=\"18sp\"\r\n                android:text=\"Listados\" />\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\">\r\n\r\n                <ImageView\r\n                    android:id=\"@+id/imageView1\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:padding=\"15dp\"\r\n                    android:layout_weight=\"1\"\r\n                    app:srcCompat=\"@drawable/ic_reporte\" />\r\n\r\n                <LinearLayout\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"2\"\r\n                    android:orientation=\"vertical\">\r\n\r\n                    <Button\r\n                        android:id=\"@+id/buttonn3\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_weight=\"1\"\r\n                        android:backgroundTint=\"@color/nada\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:text=\"Animales perdidos\"\r\n                        android:textAlignment=\"viewStart\"\r\n                        android:textAllCaps=\"false\" />\r\n\r\n                    <Button\r\n                        android:id=\"@+id/buttonn6\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_weight=\"1\"\r\n                        android:backgroundTint=\"@color/nada\"\r\n                        android:textColor=\"@color/black\"\r\n                        android:text=\"Animales encontrados\"\r\n                        android:textAlignment=\"viewStart\"\r\n                        android:textAllCaps=\"false\" />\r\n                </LinearLayout>\r\n            </LinearLayout>\r\n        </LinearLayout>\r\n\r\n        <View\r\n            android:id=\"@+id/divider2\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"3dp\"\r\n            android:background=\"@color/custom\" />\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView5\"\r\n                android:layout_marginTop=\"10dp\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_weight=\"1\"\r\n                android:textColor=\"@color/custom\"\r\n                android:textStyle=\"bold\"\r\n                android:textSize=\"18sp\"\r\n                android:text=\"Mapa GarrApp\" />\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:layout_weight=\"1\"\r\n                android:orientation=\"horizontal\">\r\n\r\n                <ImageButton\r\n                    android:id=\"@+id/imageButton6\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:layout_weight=\"1\"\r\n                    android:scaleType=\"fitCenter\"\r\n                    android:padding=\"10dp\"\r\n                    android:backgroundTint=\"@color/nada\"\r\n                    app:srcCompat=\"@drawable/ic_map\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/textView6\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:padding=\"10dp\"\r\n                    android:layout_weight=\"2\"\r\n                    android:text=\"Visualiza la ubicación de instituciones aliadas, animales perdidos y  animales encontrados\" />\r\n            </LinearLayout>\r\n        </LinearLayout>\r\n\r\n        <View\r\n            android:id=\"@+id/divider3\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"3dp\"\r\n            android:background=\"@color/custom\" />\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView7\"\r\n                android:layout_marginTop=\"10dp\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:textColor=\"@color/custom\"\r\n                android:textStyle=\"bold\"\r\n                android:textSize=\"18sp\"\r\n                android:text=\"Noticias\" />\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:orientation=\"horizontal\">\r\n\r\n                <ImageButton\r\n                    android:id=\"@+id/imageButton7\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:layout_weight=\"1\"\r\n                    android:scaleType=\"fitCenter\"\r\n                    android:padding=\"10dp\"\r\n                    android:backgroundTint=\"@color/nada\"\r\n                    app:srcCompat=\"@drawable/ic_news\"\r\n                    app:tint=\"@color/black\"/>\r\n                <TextView\r\n                    android:id=\"@+id/textView8\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:padding=\"10dp\"\r\n                    android:layout_weight=\"2\"\r\n                    android:text=\"Conoce información de interés y las novedades de los reportes de GarrApp\" />\r\n\r\n            </LinearLayout>\r\n        </LinearLayout>\r\n\r\n        <View\r\n            android:id=\"@+id/divider4\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"3dp\"\r\n            android:background=\"@color/custom\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/BarraInferior\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"75dp\"\r\n        android:background=\"@color/white\"\r\n        android:orientation=\"horizontal\"\r\n        android:padding=\"10dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton9\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:onClick=\"ListaReportesActivity\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_heart\"\r\n            app:tint=\"@color/gris\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton14\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:onClick=\"AnimalesEncontradosActivity\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_list\"\r\n            app:tint=\"@color/gris\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton15\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:onClick=\"PrincipalActivity\"\r\n            android:padding=\"2dp\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_garr\"\r\n            app:tint=\"@color/custom\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton16\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:onClick=\"MapsActivity\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_map\"\r\n            app:tint=\"@color/gris\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton17\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/nada\"\r\n            android:scaleType=\"fitCenter\"\r\n            app:srcCompat=\"@drawable/ic_news\"\r\n            app:tint=\"@color/gris\" />\r\n    </LinearLayout>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_principal.xml b/app/src/main/res/layout/activity_principal.xml
+--- a/app/src/main/res/layout/activity_principal.xml	(revision 335d0d4d9bed46846b8eff8945bfac453617ca9c)
++++ b/app/src/main/res/layout/activity_principal.xml	(date 1635612378753)
+@@ -57,9 +57,10 @@
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
++        android:layout_marginBottom="74dp"
+         android:orientation="vertical"
+         android:padding="20dp"
+-        app:layout_constraintBottom_toTopOf="@+id/BarraInferior"
++        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/barraSuperior">
+@@ -73,8 +74,8 @@
+                 android:id="@+id/button"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
++                android:layout_marginRight="10dp"
+                 android:layout_weight="1"
+-                android:layout_marginRight="10dp"
+                 android:backgroundTint="@color/custom"
+                 android:drawableLeft="@drawable/ic_aliados"
+                 android:drawableTint="@color/white"
+@@ -84,8 +85,8 @@
+                 android:id="@+id/button2"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+-                android:layout_weight="1"
+                 android:layout_marginLeft="10dp"
++                android:layout_weight="1"
+                 android:backgroundTint="@color/custom"
+                 android:drawableLeft="@drawable/ic_heart"
+                 android:drawableTint="@color/white"
+@@ -98,14 +99,14 @@
+             android:orientation="vertical">
+ 
+             <TextView
+-                android:layout_marginTop="30dp"
+                 android:id="@+id/textView9"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
++                android:layout_marginTop="30dp"
++                android:text="Realizar un reporte"
+                 android:textColor="@color/custom"
+-                android:textStyle="bold"
+                 android:textSize="18sp"
+-                android:text="Realizar un reporte" />
++                android:textStyle="bold" />
+ 
+             <LinearLayout
+                 android:layout_width="match_parent"
+@@ -116,8 +117,8 @@
+                     android:id="@+id/imageView"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+-                    android:padding="15dp"
+                     android:layout_weight="1"
++                    android:padding="15dp"
+                     app:srcCompat="@drawable/ic_reporte" />
+ 
+                 <LinearLayout
+@@ -132,10 +133,10 @@
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:backgroundTint="@color/nada"
+-                        android:textColor="@color/black"
+                         android:text="Animal perdido"
+                         android:textAlignment="viewStart"
+-                        android:textAllCaps="false" />
++                        android:textAllCaps="false"
++                        android:textColor="@color/black" />
+ 
+                     <Button
+                         android:id="@+id/button6"
+@@ -143,10 +144,10 @@
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:backgroundTint="@color/nada"
+-                        android:textColor="@color/black"
+                         android:text="Animal encontrado"
+                         android:textAlignment="viewStart"
+-                        android:textAllCaps="false" />
++                        android:textAllCaps="false"
++                        android:textColor="@color/black" />
+                 </LinearLayout>
+ 
+             </LinearLayout>
+@@ -165,13 +166,13 @@
+ 
+             <TextView
+                 android:id="@+id/textView11"
+-                android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
++                android:layout_marginTop="10dp"
++                android:text="Listados"
+                 android:textColor="@color/custom"
+-                android:textStyle="bold"
+                 android:textSize="18sp"
+-                android:text="Listados" />
++                android:textStyle="bold" />
+ 
+             <LinearLayout
+                 android:layout_width="match_parent"
+@@ -182,8 +183,8 @@
+                     android:id="@+id/imageView1"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+-                    android:padding="15dp"
+                     android:layout_weight="1"
++                    android:padding="15dp"
+                     app:srcCompat="@drawable/ic_reporte" />
+ 
+                 <LinearLayout
+@@ -198,10 +199,10 @@
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:backgroundTint="@color/nada"
+-                        android:textColor="@color/black"
+                         android:text="Animales perdidos"
+                         android:textAlignment="viewStart"
+-                        android:textAllCaps="false" />
++                        android:textAllCaps="false"
++                        android:textColor="@color/black" />
+ 
+                     <Button
+                         android:id="@+id/buttonn6"
+@@ -209,10 +210,10 @@
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:backgroundTint="@color/nada"
+-                        android:textColor="@color/black"
+                         android:text="Animales encontrados"
+                         android:textAlignment="viewStart"
+-                        android:textAllCaps="false" />
++                        android:textAllCaps="false"
++                        android:textColor="@color/black" />
+                 </LinearLayout>
+             </LinearLayout>
+         </LinearLayout>
+@@ -230,14 +231,14 @@
+ 
+             <TextView
+                 android:id="@+id/textView5"
+-                android:layout_marginTop="10dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
++                android:layout_marginTop="10dp"
+                 android:layout_weight="1"
++                android:text="Mapa GarrApp"
+                 android:textColor="@color/custom"
+-                android:textStyle="bold"
+                 android:textSize="18sp"
+-                android:text="Mapa GarrApp" />
++                android:textStyle="bold" />
+ 
+             <LinearLayout
+                 android:layout_width="match_parent"
+@@ -250,17 +251,17 @@
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
++                    android:backgroundTint="@color/nada"
++                    android:padding="10dp"
+                     android:scaleType="fitCenter"
+-                    android:padding="10dp"
+-                    android:backgroundTint="@color/nada"
+                     app:srcCompat="@drawable/ic_map" />
+ 
+                 <TextView
+                     android:id="@+id/textView6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+-                    android:padding="10dp"
+                     android:layout_weight="2"
++                    android:padding="10dp"
+                     android:text="Visualiza la ubicación de instituciones aliadas, animales perdidos y  animales encontrados" />
+             </LinearLayout>
+         </LinearLayout>
+@@ -278,13 +279,13 @@
+ 
+             <TextView
+                 android:id="@+id/textView7"
+-                android:layout_marginTop="10dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
++                android:layout_marginTop="10dp"
++                android:text="Noticias"
+                 android:textColor="@color/custom"
+-                android:textStyle="bold"
+                 android:textSize="18sp"
+-                android:text="Noticias" />
++                android:textStyle="bold" />
+ 
+             <LinearLayout
+                 android:layout_width="match_parent"
+@@ -296,17 +297,18 @@
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+-                    android:scaleType="fitCenter"
+-                    android:padding="10dp"
+                     android:backgroundTint="@color/nada"
++                    android:padding="10dp"
++                    android:scaleType="fitCenter"
+                     app:srcCompat="@drawable/ic_news"
+-                    app:tint="@color/black"/>
++                    app:tint="@color/black" />
++
+                 <TextView
+                     android:id="@+id/textView8"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+-                    android:padding="10dp"
+                     android:layout_weight="2"
++                    android:padding="10dp"
+                     android:text="Conoce información de interés y las novedades de los reportes de GarrApp" />
+ 
+             </LinearLayout>
+@@ -320,72 +322,22 @@
+ 
+     </LinearLayout>
+ 
+-    <LinearLayout
+-        android:id="@+id/BarraInferior"
++    <com.google.android.material.bottomnavigation.BottomNavigationView
++        android:id="@+id/bottom_nav"
+         android:layout_width="match_parent"
+-        android:layout_height="75dp"
+-        android:background="@color/white"
+-        android:orientation="horizontal"
+-        android:padding="10dp"
++        android:layout_height="wrap_content"
++        app:itemBackground="@color/white"
++        app:itemIconTint="@drawable/selector"
++        app:itemTextColor="@drawable/selector"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent">
++
++        app:menu="@menu/menu" />
+ 
+-        <ImageButton
+-            android:id="@+id/imageButton9"
+-            android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:layout_weight="1"
+-            android:backgroundTint="@color/nada"
+-            android:onClick="ListaReportesActivity"
+-            android:scaleType="fitCenter"
+-            app:srcCompat="@drawable/ic_heart"
+-            app:tint="@color/gris" />
+ 
+-        <ImageButton
+-            android:id="@+id/imageButton14"
+-            android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:layout_weight="1"
+-            android:backgroundTint="@color/nada"
+-            android:onClick="AnimalesEncontradosActivity"
+-            android:scaleType="fitCenter"
+-            app:srcCompat="@drawable/ic_list"
+-            app:tint="@color/gris" />
+ 
+-        <ImageButton
+-            android:id="@+id/imageButton15"
+-            android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:layout_weight="1"
+-            android:backgroundTint="@color/nada"
+-            android:onClick="PrincipalActivity"
+-            android:padding="2dp"
+-            android:scaleType="fitCenter"
+-            app:srcCompat="@drawable/ic_garr"
+-            app:tint="@color/custom" />
+ 
+-        <ImageButton
+-            android:id="@+id/imageButton16"
+-            android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:layout_weight="1"
+-            android:backgroundTint="@color/nada"
+-            android:onClick="MapsActivity"
+-            android:scaleType="fitCenter"
+-            app:srcCompat="@drawable/ic_map"
+-            app:tint="@color/gris" />
+ 
+-        <ImageButton
+-            android:id="@+id/imageButton17"
+-            android:layout_width="0dp"
+-            android:layout_height="match_parent"
+-            android:layout_weight="1"
+-            android:backgroundTint="@color/nada"
+-            android:scaleType="fitCenter"
+-            app:srcCompat="@drawable/ic_news"
+-            app:tint="@color/gris" />
+-    </LinearLayout>
++
+ 
+ 
+ 
+Index: app/src/main/res/menu/menu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/menu.xml b/app/src/main/res/menu/menu.xml
+new file mode 100644
+--- /dev/null	(date 1635610710688)
++++ b/app/src/main/res/menu/menu.xml	(date 1635610710688)
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<menu xmlns:android="http://schemas.android.com/apk/res/android">
++
++    <item
++        android:id="@+id/reportes"
++        android:title="Reportes"
++        android:icon="@drawable/ic_heart" />
++
++    <item
++        android:id="@+id/list"
++        android:title="Listados"
++        android:icon="@drawable/ic_list" />
++
++    <item
++        android:id="@+id/home"
++        android:title="Inicio"
++        android:icon="@drawable/ic_logo" />
++
++    <item
++        android:id="@+id/map"
++        android:title="Mapa"
++        android:icon="@drawable/ic_map" />
++
++    <item
++        android:id="@+id/news"
++        android:title="Noticias"
++        android:icon="@drawable/ic_news" />
++
++
++</menu>
+\ No newline at end of file
+Index: app/src/main/res/drawable/selector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/selector.xml b/app/src/main/res/drawable/selector.xml
+new file mode 100644
+--- /dev/null	(date 1635611604624)
++++ b/app/src/main/res/drawable/selector.xml	(date 1635611604624)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="utf-8"?>
++<selector xmlns:android="http://schemas.android.com/apk/res/android">
++
++    <item
++        android:state_selected="true"
++        android:drawable="@color/white"
++        android:color="@color/custom"
++        />
++
++    <item
++        android:state_selected="false"
++        android:color="@color/gris"
++        />
++
++</selector>
+\ No newline at end of file
+Index: local.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>## This file is automatically generated by Android Studio.\r\n# Do not modify this file -- YOUR CHANGES WILL BE ERASED!\r\n#\r\n# This file should *NOT* be checked into Version Control Systems,\r\n# as it contains information specific to your local configuration.\r\n#\r\n# Location of the SDK. This is only used by Gradle.\r\n# For customization when using a Version Control System, please read the\r\n# header note.\r\nsdk.dir=C\\:\\\\Users\\\\Milo\\\\AppData\\\\Local\\\\Android\\\\Sdk
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+diff --git a/local.properties b/local.properties
+--- a/local.properties	(revision 335d0d4d9bed46846b8eff8945bfac453617ca9c)
++++ b/local.properties	(date 1635168512068)
+@@ -7,4 +7,4 @@
+ # Location of the SDK. This is only used by Gradle.
+ # For customization when using a Version Control System, please read the
+ # header note.
+-sdk.dir=C\:\\Users\\Milo\\AppData\\Local\\Android\\Sdk
+\ No newline at end of file
++sdk.dir=D\:\\Usuarios\\Ingrid\\AppData\\Local\\Android\\Sdk
+\ No newline at end of file

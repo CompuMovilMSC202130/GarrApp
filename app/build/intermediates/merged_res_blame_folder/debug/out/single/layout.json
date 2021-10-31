@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_instituciones.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_instituciones.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps2.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_maps2.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_noticias.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_noticias.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tusreportes.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_tusreportes.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\login_tab_fragment.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\login_tab_fragment.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_animales_encontrados.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_animales_encontrados.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_registro.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_registro.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_listados.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_listados.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_prueba_main.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_prueba_main.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_principal.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_principal.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_instituciones_aliadas.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_instituciones_aliadas.xml"
+    }
+]

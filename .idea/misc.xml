@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/arrow_back_ios_new_black_24dp.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/barrainferiorgarra.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/barrainferiormapas.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/barrainferiornoticias.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/button_bg.xml" value="0.21574074074074073" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_aliados.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_garr.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_heart.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_list.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_logo.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_logout.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_map.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_news.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/ic_reporte.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/principalaliados.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/principallistados.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/selector.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/vie_bg.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_animales_encontrados.xml" value="0.20416666666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_instituciones.xml" value="0.1933876811594203" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_lista_reportes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_listados.xml" value="0.19610507246376813" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.18115942028985507" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_noticias.xml" value="0.19010416666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_principal.xml" value="0.25" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_prueba_main.xml" value="0.18342391304347827" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_registro.xml" value="0.20416666666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_tusreportes.xml" value="0.18342391304347827" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/login_tab_fragment.xml" value="0.1933876811594203" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/menu/menu.xml" value="0.1814814814814815" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
