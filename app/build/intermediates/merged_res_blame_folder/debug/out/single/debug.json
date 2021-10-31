@@ -68,16 +68,16 @@
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_maps2.xml.flat",
-        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_maps2.xml"
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_barrainferiorgarra.png.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\barrainferiorgarra.png"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_vie_bg.xml.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\vie_bg.xml"
     },
     {
-        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_barrainferiorgarra.png.flat",
-        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\barrainferiorgarra.png"
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_maps2.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_maps2.xml"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_sin_t_tulo.png.flat",
@@ -96,12 +96,12 @@
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\barrainferiormisreportes.xml"
     },
     {
-        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_garr.png.flat",
-        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_garr.png"
-    },
-    {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_barrainferiormisreportes.png.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\barrainferiormisreportes.png"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_garr.png.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_garr.png"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_mapasaliados.xml.flat",
@@ -124,12 +124,12 @@
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\noun_dog_3001321.png"
     },
     {
-        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_iniciocandado.xml.flat",
-        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\iniciocandado.xml"
-    },
-    {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_barrainferiorgarra.png.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\barrainferiorgarra.png"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_iniciocandado.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\iniciocandado.xml"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_inicioperson.xml.flat",
@@ -308,6 +308,10 @@
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\drawable\\mapa2.png"
     },
     {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_tusreportesencontrados_tab_fragment.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\tusreportesencontrados_tab_fragment.xml"
+    },
+    {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_perdidos_tab_fragment.xml.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\perdidos_tab_fragment.xml"
     },
@@ -418,6 +422,10 @@
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_garr.png.flat",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_garr.png"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\layout_tusreportesperdidos_tab_fragment.xml.flat",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\tusreportesperdidos_tab_fragment.xml"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_mapasveterinaria.xml.flat",

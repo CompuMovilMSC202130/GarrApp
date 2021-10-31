@@ -1,9 +1,11 @@
+com/example/garrapp/databinding/TusreportesperdidosTabFragmentBinding.java
+ com.example.garrapp.databinding.TusreportesperdidosTabFragmentBinding
 com/example/garrapp/databinding/ActivityMapsBinding.java
  com.example.garrapp.databinding.ActivityMapsBinding
 com/example/garrapp/InstitucionesAliadasActivity.java
  com.example.garrapp.InstitucionesAliadasActivity
-com/example/garrapp/databinding/ActivityListadosBinding.java
- com.example.garrapp.databinding.ActivityListadosBinding
+com/example/garrapp/databinding/LoginTabFragmentBinding.java
+ com.example.garrapp.databinding.LoginTabFragmentBinding
 com/example/garrapp/databinding/ActivityMainBinding.java
  com.example.garrapp.databinding.ActivityMainBinding
 com/example/garrapp/LoginTabFragment.java
@@ -36,6 +38,8 @@ com/example/garrapp/databinding/ActivityTusreportesBinding.java
  com.example.garrapp.databinding.ActivityTusreportesBinding
 com/example/garrapp/ListasAdapter.java
  com.example.garrapp.ListasAdapter
+com/example/garrapp/TusReportesAdapter.java
+ com.example.garrapp.TusReportesAdapter
 com/example/garrapp/NoticiasActivity.java
  com.example.garrapp.NoticiasActivity
  com.example.garrapp.NoticiasActivity$1
@@ -53,6 +57,8 @@ com/example/garrapp/databinding/ActivityNoticiasBinding.java
 com/example/garrapp/PrincipalActivity.java
  com.example.garrapp.PrincipalActivity
  com.example.garrapp.PrincipalActivity$1
+com/example/garrapp/databinding/TusreportesencontradosTabFragmentBinding.java
+ com.example.garrapp.databinding.TusreportesencontradosTabFragmentBinding
 com/example/garrapp/LoginActivity.java
  com.example.garrapp.LoginActivity
 com/example/garrapp/databinding/ActivityPrincipalBinding.java
@@ -65,13 +71,17 @@ com/example/garrapp/EncontradosTabFragment.java
  com.example.garrapp.EncontradosTabFragment
 com/example/garrapp/databinding/ActivityLoginBinding.java
  com.example.garrapp.databinding.ActivityLoginBinding
+com/example/garrapp/TusReportesEncontradosTabFragment.java
+ com.example.garrapp.TusReportesEncontradosTabFragment
 com/example/garrapp/SignupTabFragment.java
  com.example.garrapp.SignupTabFragment
+com/example/garrapp/TusReportesPerdidosTabFragment.java
+ com.example.garrapp.TusReportesPerdidosTabFragment
 com/example/garrapp/MainActivity.java
  com.example.garrapp.MainActivity
 com/example/garrapp/LoginAdapter.java
  com.example.garrapp.LoginAdapter
 com/example/garrapp/ListasTabFragment.java
  com.example.garrapp.ListasTabFragment
-com/example/garrapp/databinding/LoginTabFragmentBinding.java
- com.example.garrapp.databinding.LoginTabFragmentBinding
+com/example/garrapp/databinding/ActivityListadosBinding.java
+ com.example.garrapp.databinding.ActivityListadosBinding

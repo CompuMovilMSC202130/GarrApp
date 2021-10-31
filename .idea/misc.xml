@@ -26,7 +26,7 @@
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_animales_encontrados.xml" value="0.20416666666666666" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_instituciones.xml" value="0.1933876811594203" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_lista_reportes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_listados.xml" value="0.19610507246376813" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_listados.xml" value="0.17" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.18115942028985507" />
@@ -39,6 +39,8 @@
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/encontrados_tab_fragment.xml" value="0.19021739130434784" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/login_tab_fragment.xml" value="0.1933876811594203" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/perdidos_tab_fragment.xml" value="0.1" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/tusreportesencontrados_tab_fragment.xml" value="0.1" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/tusreportesperdidos_tab_fragment.xml" value="0.19021739130434784" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/menu/menu.xml" value="0.1814814814814815" />
       </map>
     </option>

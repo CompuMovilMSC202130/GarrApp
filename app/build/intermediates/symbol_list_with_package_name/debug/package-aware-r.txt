@@ -1121,6 +1121,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -1392,6 +1396,8 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2046,6 +2052,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btn_ingresar
 id button
 id button2
@@ -2192,6 +2203,8 @@ id imageView3
 id imageView4
 id imageView5
 id imageView5p
+id imageView6
+id imageView7
 id immediateStop
 id included
 id info
@@ -2392,6 +2405,7 @@ id supportScrollUp
 id tabMode
 id tab_layout
 id tab_layoutlistados
+id tab_layouttusreportes
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -2462,6 +2476,7 @@ id vertical_only
 id view_offset_helper
 id view_pager
 id view_pagerlistados
+id view_pagertusreportes
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2557,6 +2572,8 @@ layout activity_noticias
 layout activity_principal
 layout activity_registro
 layout activity_tusreportes
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2644,6 +2661,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout tusreportesencontrados_tab_fragment
+layout tusreportesperdidos_tab_fragment
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round

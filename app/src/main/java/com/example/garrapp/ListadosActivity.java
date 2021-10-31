@@ -24,15 +24,14 @@ public class ListadosActivity extends AppCompatActivity {
     ViewPager viewPager;
     float v =0;
 
-    Button btn_ingreso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listados);
 
-        // fragmentos de la actividad encontrados / perdidos
 
+        // barra de navegación inferior, casos para el cambio
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.Listados);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,8 +68,8 @@ public class ListadosActivity extends AppCompatActivity {
         });
 
 
-        // barra de navegación inferior, casos para el cambio
 
+        // fragmentos de la actividad encontrados / perdidos
         tabLayout=findViewById(R.id.tab_layoutlistados);
         viewPager = findViewById( R.id.view_pagerlistados);
 
@@ -83,7 +82,7 @@ public class ListadosActivity extends AppCompatActivity {
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         tabLayout.setTranslationY(300);
-        tabLayout.setAlpha(v);
+        tabLayout.setAlpha(1);
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
 

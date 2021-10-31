@@ -4,6 +4,9 @@ package com.example.garrapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,20 +25,38 @@ public final class ActivityListadosBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final LinearLayout barraSuperior;
+
+  @NonNull
   public final BottomNavigationView bottomNav;
+
+  @NonNull
+  public final ImageButton imageButton3;
+
+  @NonNull
+  public final ImageButton imageButton5;
 
   @NonNull
   public final TabLayout tabLayoutlistados;
 
   @NonNull
+  public final TextView textView;
+
+  @NonNull
   public final ViewPager viewPagerlistados;
 
   private ActivityListadosBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNav, @NonNull TabLayout tabLayoutlistados,
+      @NonNull LinearLayout barraSuperior, @NonNull BottomNavigationView bottomNav,
+      @NonNull ImageButton imageButton3, @NonNull ImageButton imageButton5,
+      @NonNull TabLayout tabLayoutlistados, @NonNull TextView textView,
       @NonNull ViewPager viewPagerlistados) {
     this.rootView = rootView;
+    this.barraSuperior = barraSuperior;
     this.bottomNav = bottomNav;
+    this.imageButton3 = imageButton3;
+    this.imageButton5 = imageButton5;
     this.tabLayoutlistados = tabLayoutlistados;
+    this.textView = textView;
     this.viewPagerlistados = viewPagerlistados;
   }
 
@@ -66,9 +87,27 @@ public final class ActivityListadosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.barraSuperior;
+      LinearLayout barraSuperior = ViewBindings.findChildViewById(rootView, id);
+      if (barraSuperior == null) {
+        break missingId;
+      }
+
       id = R.id.bottom_nav;
       BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
       if (bottomNav == null) {
+        break missingId;
+      }
+
+      id = R.id.imageButton3;
+      ImageButton imageButton3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageButton3 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageButton5;
+      ImageButton imageButton5 = ViewBindings.findChildViewById(rootView, id);
+      if (imageButton5 == null) {
         break missingId;
       }
 
@@ -78,14 +117,20 @@ public final class ActivityListadosBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
       id = R.id.view_pagerlistados;
       ViewPager viewPagerlistados = ViewBindings.findChildViewById(rootView, id);
       if (viewPagerlistados == null) {
         break missingId;
       }
 
-      return new ActivityListadosBinding((ConstraintLayout) rootView, bottomNav, tabLayoutlistados,
-          viewPagerlistados);
+      return new ActivityListadosBinding((ConstraintLayout) rootView, barraSuperior, bottomNav,
+          imageButton3, imageButton5, tabLayoutlistados, textView, viewPagerlistados);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -36,8 +36,16 @@
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_registro.xml"
     },
     {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\tusreportesperdidos_tab_fragment.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\tusreportesperdidos_tab_fragment.xml"
+    },
+    {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_listados.xml",
         "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\activity_listados.xml"
+    },
+    {
+        "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\tusreportesencontrados_tab_fragment.xml",
+        "source": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\src\\main\\res\\layout\\tusreportesencontrados_tab_fragment.xml"
     },
     {
         "merged": "D:\\Usuarios\\Ingrid\\AndroidStudioProjects\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",

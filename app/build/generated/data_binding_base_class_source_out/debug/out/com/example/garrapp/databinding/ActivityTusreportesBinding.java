@@ -12,8 +12,10 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager.widget.ViewPager;
 import com.example.garrapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -35,18 +37,27 @@ public final class ActivityTusreportesBinding implements ViewBinding {
   public final ImageButton imageButton5;
 
   @NonNull
+  public final TabLayout tabLayouttusreportes;
+
+  @NonNull
   public final TextView textView;
+
+  @NonNull
+  public final ViewPager viewPagertusreportes;
 
   private ActivityTusreportesBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout barraSuperior, @NonNull BottomNavigationView bottomNav,
       @NonNull ImageButton imageButton3, @NonNull ImageButton imageButton5,
-      @NonNull TextView textView) {
+      @NonNull TabLayout tabLayouttusreportes, @NonNull TextView textView,
+      @NonNull ViewPager viewPagertusreportes) {
     this.rootView = rootView;
     this.barraSuperior = barraSuperior;
     this.bottomNav = bottomNav;
     this.imageButton3 = imageButton3;
     this.imageButton5 = imageButton5;
+    this.tabLayouttusreportes = tabLayouttusreportes;
     this.textView = textView;
+    this.viewPagertusreportes = viewPagertusreportes;
   }
 
   @Override
@@ -100,14 +111,26 @@ public final class ActivityTusreportesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tab_layouttusreportes;
+      TabLayout tabLayouttusreportes = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayouttusreportes == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
+      id = R.id.view_pagertusreportes;
+      ViewPager viewPagertusreportes = ViewBindings.findChildViewById(rootView, id);
+      if (viewPagertusreportes == null) {
+        break missingId;
+      }
+
       return new ActivityTusreportesBinding((ConstraintLayout) rootView, barraSuperior, bottomNav,
-          imageButton3, imageButton5, textView);
+          imageButton3, imageButton5, tabLayouttusreportes, textView, viewPagertusreportes);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
