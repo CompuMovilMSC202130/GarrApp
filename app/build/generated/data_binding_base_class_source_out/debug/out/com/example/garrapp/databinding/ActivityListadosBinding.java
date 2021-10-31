@@ -25,18 +25,18 @@ public final class ActivityListadosBinding implements ViewBinding {
   public final BottomNavigationView bottomNav;
 
   @NonNull
-  public final TabLayout tabLayout;
+  public final TabLayout tabLayoutlistados;
 
   @NonNull
-  public final ViewPager viewPager;
+  public final ViewPager viewPagerlistados;
 
   private ActivityListadosBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNav, @NonNull TabLayout tabLayout,
-      @NonNull ViewPager viewPager) {
+      @NonNull BottomNavigationView bottomNav, @NonNull TabLayout tabLayoutlistados,
+      @NonNull ViewPager viewPagerlistados) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
-    this.tabLayout = tabLayout;
-    this.viewPager = viewPager;
+    this.tabLayoutlistados = tabLayoutlistados;
+    this.viewPagerlistados = viewPagerlistados;
   }
 
   @Override
@@ -72,20 +72,20 @@ public final class ActivityListadosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tab_layout;
-      TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
-      if (tabLayout == null) {
+      id = R.id.tab_layoutlistados;
+      TabLayout tabLayoutlistados = ViewBindings.findChildViewById(rootView, id);
+      if (tabLayoutlistados == null) {
         break missingId;
       }
 
-      id = R.id.view_pager;
-      ViewPager viewPager = ViewBindings.findChildViewById(rootView, id);
-      if (viewPager == null) {
+      id = R.id.view_pagerlistados;
+      ViewPager viewPagerlistados = ViewBindings.findChildViewById(rootView, id);
+      if (viewPagerlistados == null) {
         break missingId;
       }
 
-      return new ActivityListadosBinding((ConstraintLayout) rootView, bottomNav, tabLayout,
-          viewPager);
+      return new ActivityListadosBinding((ConstraintLayout) rootView, bottomNav, tabLayoutlistados,
+          viewPagerlistados);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

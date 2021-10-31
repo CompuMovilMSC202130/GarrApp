@@ -4,7 +4,6 @@ package com.example.garrapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -23,14 +22,10 @@ public final class ActivityNoticiasBinding implements ViewBinding {
   @NonNull
   public final BottomNavigationView bottomNav;
 
-  @NonNull
-  public final ImageView imageView5;
-
   private ActivityNoticiasBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNav, @NonNull ImageView imageView5) {
+      @NonNull BottomNavigationView bottomNav) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
-    this.imageView5 = imageView5;
   }
 
   @Override
@@ -66,13 +61,7 @@ public final class ActivityNoticiasBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView5;
-      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView5 == null) {
-        break missingId;
-      }
-
-      return new ActivityNoticiasBinding((ConstraintLayout) rootView, bottomNav, imageView5);
+      return new ActivityNoticiasBinding((ConstraintLayout) rootView, bottomNav);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

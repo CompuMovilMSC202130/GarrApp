@@ -19,6 +19,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -49,6 +50,7 @@ import com.example.garrapp.databinding.ActivityMapsBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,6 +64,8 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
 
+
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
     private EditText search;
     private GoogleMap mMap;
@@ -71,6 +75,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker locationMarker;
     LatLng aLatLng = new LatLng(4.65, -74.05);
     boolean isNewPos = false;
+
+    // botones de barra inferior
+    BottomNavigationView bottomNavigationView;
 
     String locationPermission = Manifest.permission.ACCESS_FINE_LOCATION;
     public static final int PERMISSION_LOCATION = 2;
@@ -103,7 +110,48 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //
+        // botones de barra inferior
+
+        bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setSelectedItemId(R.id.Mapa);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.Reportes:
+                        startActivity(new Intent(getApplicationContext(),TusReportesActivity.class));
+                        overridePendingTransition(1,0);
+                        return true;
+
+                    case R.id.Listados:
+                        startActivity(new Intent(getApplicationContext(),ListadosActivity.class));
+                        overridePendingTransition(1,0);
+                        return true;
+
+                    case R.id.Home:
+                        startActivity(new Intent(getApplicationContext(),PrincipalActivity.class));
+                        overridePendingTransition(1,0);
+                        return true;
+
+                    case R.id.Mapa:
+                        return true;
+
+                    case R.id.Noticias:
+                        startActivity(new Intent(getApplicationContext(),NoticiasActivity.class));
+                        overridePendingTransition(1,0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
+
+
+
+
+
 
 
         mGeocoder = new Geocoder(this);

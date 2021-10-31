@@ -12,7 +12,7 @@ public class ListasAdapter extends FragmentPagerAdapter {
     int totalTabs;
 
     public ListasAdapter (FragmentManager fm, Context context , int totalTabs){
-        super( fm);
+        super(fm);
         this.context = context;
         this.totalTabs = totalTabs;
 
@@ -27,12 +27,12 @@ public class ListasAdapter extends FragmentPagerAdapter {
     public Fragment getItem (int position){
         switch (position){
             case 0:
-                LoginTabFragment EncontradosTabFragment = new LoginTabFragment();
+                EncontradosTabFragment EncontradosTabFragment = new EncontradosTabFragment();
                 return EncontradosTabFragment;
 
             case 1:
-                LoginTabFragment PerdidosTabFragment1 = new LoginTabFragment();
-                return PerdidosTabFragment1;
+                PerdidosTabFragment PerdidosTabFragment = new PerdidosTabFragment();
+                return PerdidosTabFragment;
             default:
                 return  null;
         }

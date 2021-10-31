@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.garrapp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -25,6 +26,9 @@ public final class ActivityInstitucionesAliadasBinding implements ViewBinding {
   public final LinearLayout barraSuperior;
 
   @NonNull
+  public final BottomNavigationView bottomNav;
+
+  @NonNull
   public final ImageButton imageButton3;
 
   @NonNull
@@ -34,10 +38,12 @@ public final class ActivityInstitucionesAliadasBinding implements ViewBinding {
   public final TextView textView;
 
   private ActivityInstitucionesAliadasBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout barraSuperior, @NonNull ImageButton imageButton3,
-      @NonNull ImageButton imageButton5, @NonNull TextView textView) {
+      @NonNull LinearLayout barraSuperior, @NonNull BottomNavigationView bottomNav,
+      @NonNull ImageButton imageButton3, @NonNull ImageButton imageButton5,
+      @NonNull TextView textView) {
     this.rootView = rootView;
     this.barraSuperior = barraSuperior;
+    this.bottomNav = bottomNav;
     this.imageButton3 = imageButton3;
     this.imageButton5 = imageButton5;
     this.textView = textView;
@@ -76,6 +82,12 @@ public final class ActivityInstitucionesAliadasBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bottom_nav;
+      BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+
       id = R.id.imageButton3;
       ImageButton imageButton3 = ViewBindings.findChildViewById(rootView, id);
       if (imageButton3 == null) {
@@ -95,7 +107,7 @@ public final class ActivityInstitucionesAliadasBinding implements ViewBinding {
       }
 
       return new ActivityInstitucionesAliadasBinding((ConstraintLayout) rootView, barraSuperior,
-          imageButton3, imageButton5, textView);
+          bottomNav, imageButton3, imageButton5, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

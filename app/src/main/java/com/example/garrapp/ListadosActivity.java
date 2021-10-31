@@ -69,11 +69,7 @@ public class ListadosActivity extends AppCompatActivity {
         });
 
 
-
-
-
         // barra de navegación inferior, casos para el cambio
-
 
         tabLayout=findViewById(R.id.tab_layoutlistados);
         viewPager = findViewById( R.id.view_pagerlistados);
@@ -86,9 +82,9 @@ public class ListadosActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-      //  tabLayout.setTranslationY(300);
-      //  tabLayout.setAlpha(v);
-      //  tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+        tabLayout.setTranslationY(300);
+        tabLayout.setAlpha(v);
+        tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
 
     }

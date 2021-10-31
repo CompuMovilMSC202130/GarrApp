@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.garrapp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,6 +25,9 @@ public final class ActivityAnimalesEncontradosBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout barraSuperior;
+
+  @NonNull
+  public final BottomNavigationView bottomNav;
 
   @NonNull
   public final EditText editTextTextPersonName2;
@@ -50,13 +54,14 @@ public final class ActivityAnimalesEncontradosBinding implements ViewBinding {
   public final TextView textView;
 
   private ActivityAnimalesEncontradosBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout barraSuperior, @NonNull EditText editTextTextPersonName2,
-      @NonNull EditText editTextTextPersonName3, @NonNull EditText editTextTextPersonName4,
-      @NonNull ImageButton imageButton3, @NonNull ImageButton imageButton5,
-      @NonNull LinearLayout linearLayout, @NonNull TextView textReporte4,
-      @NonNull TextView textView) {
+      @NonNull LinearLayout barraSuperior, @NonNull BottomNavigationView bottomNav,
+      @NonNull EditText editTextTextPersonName2, @NonNull EditText editTextTextPersonName3,
+      @NonNull EditText editTextTextPersonName4, @NonNull ImageButton imageButton3,
+      @NonNull ImageButton imageButton5, @NonNull LinearLayout linearLayout,
+      @NonNull TextView textReporte4, @NonNull TextView textView) {
     this.rootView = rootView;
     this.barraSuperior = barraSuperior;
+    this.bottomNav = bottomNav;
     this.editTextTextPersonName2 = editTextTextPersonName2;
     this.editTextTextPersonName3 = editTextTextPersonName3;
     this.editTextTextPersonName4 = editTextTextPersonName4;
@@ -97,6 +102,12 @@ public final class ActivityAnimalesEncontradosBinding implements ViewBinding {
       id = R.id.barraSuperior;
       LinearLayout barraSuperior = ViewBindings.findChildViewById(rootView, id);
       if (barraSuperior == null) {
+        break missingId;
+      }
+
+      id = R.id.bottom_nav;
+      BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
         break missingId;
       }
 
@@ -149,8 +160,8 @@ public final class ActivityAnimalesEncontradosBinding implements ViewBinding {
       }
 
       return new ActivityAnimalesEncontradosBinding((ConstraintLayout) rootView, barraSuperior,
-          editTextTextPersonName2, editTextTextPersonName3, editTextTextPersonName4, imageButton3,
-          imageButton5, linearLayout, textReporte4, textView);
+          bottomNav, editTextTextPersonName2, editTextTextPersonName3, editTextTextPersonName4,
+          imageButton3, imageButton5, linearLayout, textReporte4, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
