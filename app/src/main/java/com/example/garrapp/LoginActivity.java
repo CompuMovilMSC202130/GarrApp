@@ -14,9 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+//import com.google.firebase.auth.AuthResult;
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseUser;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     public static String TAG = "GarrApp";
 
     //FirebaseAuth
-    private FirebaseAuth mAuth;
+    //private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //inflate
-        mAuth=FirebaseAuth.getInstance();
+        //mAuth=FirebaseAuth.getInstance();
 
         tabLayout=findViewById(R.id.tab_layout);
         viewPager = findViewById( R.id.view_pager);
@@ -101,12 +101,14 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /*
     @Override
     protected void onStart(){
         super.onStart();
-        FirebaseUser user=mAuth.getCurrentUser();
+        //FirebaseUser user=mAuth.getCurrentUser();
         updateUI(user);
     }
+
 
     private void updateUI(FirebaseUser user) {
         if(user!=null){
@@ -115,6 +117,8 @@ public class LoginActivity extends AppCompatActivity {
             //
         }
     }
+    */
+
 
     private boolean validateForm(String emailS,String passwordS)
     {
@@ -123,10 +127,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void ingresarPressed (View v){
-        startActivity(new Intent(this, Principal.class));
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 
-
+/*
     public void ingresarPresseda(View v){
         //emailS = login_tab_fragment.findViewById(R.id.email).toString();
         //emailS = ((EditText)login_tab_fragment.findViewById(R.id.email)).getText().toString();
@@ -151,4 +155,6 @@ public class LoginActivity extends AppCompatActivity {
     public void signInPressed(View v){
 
     }
+    */
+
 }
