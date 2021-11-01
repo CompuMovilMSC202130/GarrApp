@@ -2,42 +2,34 @@ package com.example.garrapp;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class ListasAdapter extends FragmentPagerAdapter {
+public class ListasAdapter extends FragmentStateAdapter {
 
-    private Context context;
-    int totalTabs;
 
-    public ListasAdapter(FragmentManager fml, Context context , int totalTabs){
-        super(fml);
-        this.context = context;
-        this.totalTabs = totalTabs;
+    public ListasAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
+    }
 
+    @NonNull
+    @Override
+    public Fragment createFragment(int position) {
+
+        switch (position){
+            case 1:
+                return new EncontradosFragment();
+        }
+        return new PerdidosFragment();
     }
 
     @Override
-    public int getCount() {
-        return totalTabs;
+    public int getItemCount() {
+        return 2;
     }
-
-    public Fragment getItem (int position){
-        switch (position){
-            case 0:
-                EncontradosTabFragment encontradosTabFragment = new EncontradosTabFragment();
-                return encontradosTabFragment;
-
-            case 1:
-                PerdidosTabFragment perdidosTabFragment = new PerdidosTabFragment();
-                return perdidosTabFragment;
-            default:
-                return  null;
-        }
-
-    }
-
-
 }

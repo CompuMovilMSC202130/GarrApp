@@ -52,7 +52,7 @@
 
     </LinearLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pagerlistados"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -61,7 +61,8 @@
         app:layout_constraintHeight_percent=".7"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tab_layoutlistados" />
+        app:layout_constraintTop_toBottomOf="@+id/tab_layoutlistados"
+        tools:ignore="MissingClass" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layoutlistados"

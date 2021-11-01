@@ -73,6 +73,7 @@
 
             <Button
                 android:id="@+id/button"
+                android:onClick="aliadosPressed"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
@@ -84,6 +85,7 @@
 
             <Button
                 android:id="@+id/button2"
+                android:onClick="tusReportesPressed"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"

@@ -19,6 +19,11 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
+        ButtomBar();
+
+    }
+
+    public void ButtomBar(){
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setSelectedItemId(R.id.Home);
 
@@ -59,6 +64,14 @@ public class PrincipalActivity extends AppCompatActivity {
 
     public void RealizarReportePressed(View v){
         startActivity(new Intent(this, ReportarActivity.class));
+    }
+
+    public void tusReportesPressed(View v){
+        startActivity(new Intent(this, TusReportesActivity.class));
+    }
+
+    public void aliadosPressed(View v){
+        startActivity(new Intent(this, InstitucionesAliadasActivity.class));
     }
 
 
