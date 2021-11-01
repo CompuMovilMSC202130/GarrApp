@@ -1961,7 +1961,6 @@ id META
 id Mapa
 id NO_DEBUG
 id Noticias
-id Number
 id Reportes
 id SHIFT
 id SHOW_ALL
@@ -2452,6 +2451,7 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
 id textView2
 id textView2p
 id textView3
