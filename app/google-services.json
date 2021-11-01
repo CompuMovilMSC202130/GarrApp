@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "13567795433",
+    "project_id": "garrapp-7b82e",
+    "storage_bucket": "garrapp-7b82e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13567795433:android:3d370b7e5ef5d4a956d078",
+        "android_client_info": {
+          "package_name": "com.example.garrapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13567795433-gh8eqevqn08abcrfkjtdp6785neq9l69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBew6jJN7MXzjno5nIXL0r5QWD5edTA5Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13567795433-gh8eqevqn08abcrfkjtdp6785neq9l69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
