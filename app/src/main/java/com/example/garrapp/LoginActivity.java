@@ -20,6 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,12 +39,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
     EditText email;
+    EditText pass;
     View login_tab_fragment;
     int btnUserid;
+
     String emailS;
     String passS;
 
     Button btn_ingreso;
+    Button btn_registro;
 
     public static String TAG = "GarrApp";
 
@@ -60,7 +64,6 @@ public class LoginActivity extends AppCompatActivity {
 
         tabLayout=findViewById(R.id.tab_layout);
         pager2=findViewById(R.id.view_pager2);
-     //   btn_ingreso = findViewById(R.id.btn_ingresar);
 
 
         FragmentManager fm = getSupportFragmentManager();
@@ -137,7 +140,7 @@ public class LoginActivity extends AppCompatActivity {
         if(user!=null){
             startActivity(new Intent(this,PrincipalActivity.class));
         }else{
-            //
+
         }
     }
 
@@ -145,7 +148,34 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean validateForm(String emailS,String passwordS)
     {
-        return true;
+        boolean esValido=true;
+
+        emailS.trim();
+        if(TextUtils.isEmpty(emailS)){
+            esValido=false;
+            email.setError("Campo Requerido");
+        }
+
+        passwordS.trim();
+        if(TextUtils.isEmpty(passwordS)){
+            esValido=false;
+            pass.setError("Campo Requerido");
+        }
+
+        if(passwordS.length()<6)
+        {
+            esValido=false;
+            pass.setError("La contraseña debe tener al menos 6 caracteres");
+        }
+
+        if(esValido=true && TextUtils.isEmpty(passwordS)!=true){
+            esValido=validarEmail(emailS);
+            if (esValido==false) {
+                email.setError("Formato de email incorrecto");
+            }
+        }
+
+        return esValido;
     }
 
 
@@ -155,12 +185,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void ingresarPressed(View v){
-        //emailS = login_tab_fragment.findViewById(R.id.email).toString();
-        //emailS = ((EditText)login_tab_fragment.findViewById(R.id.email)).getText().toString();
-        //passS = login_tab_fragment.findViewById(R.id.pass).toString();
-        //emailS=email.getText().toString();
-        emailS="a@mail.com";
-        passS="123456";
+
+        email=(EditText) findViewById(R.id.email);
+        pass=(EditText) findViewById(R.id.pass);
+
+        emailS=email.getText().toString();
+        passS=pass.getText().toString();
+
         if(validateForm(emailS,passS))
         {
             mAuth.signInWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -177,9 +208,35 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public void signInPressed(View v){
+    public void registrarPressed(View v){
+        email=(EditText) findViewById(R.id.emailR);
+        pass=(EditText) findViewById(R.id.passR);
 
+        emailS=email.getText().toString();
+        passS=pass.getText().toString();
+
+        if(validateForm(emailS,passS))
+        {
+            mAuth.createUserWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()){
+                        updateUI(mAuth.getCurrentUser());
+                    }else{
+                        Log.e(TAG,"Autentificación fallida: "+task.getException().toString());
+                        Toast.makeText(LoginActivity.this, task.getException().toString(),Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
     }
 
+    private boolean validarEmail(String email) {
+        if (!email.contains("@") ||
+                !email.contains(".") ||
+                email.length() < 6)
+            return false;
+        return true;
+    }
 
 }

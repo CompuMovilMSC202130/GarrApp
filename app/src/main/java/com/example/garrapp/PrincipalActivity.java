@@ -9,15 +9,20 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
+    //Firebase Auth
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+        mAuth = FirebaseAuth.getInstance();
 
         ButtomBar();
 
@@ -72,6 +77,15 @@ public class PrincipalActivity extends AppCompatActivity {
 
     public void aliadosPressed(View v){
         startActivity(new Intent(this, InstitucionesAliadasActivity.class));
+    }
+
+    public void Salir(View v){
+        //cierre sesion
+        mAuth.signOut();
+        //UpdateUi
+        Intent intent=new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 

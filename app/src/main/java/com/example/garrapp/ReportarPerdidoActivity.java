@@ -20,6 +20,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -27,6 +28,9 @@ import java.io.InputStream;
 public class ReportarPerdidoActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+
+    //Firebase Auth
+    private FirebaseAuth mAuth;
 
     // permisos de la cámara y galeria
     private static final int PERMISSION_REQUEST_CAMERA = 0;
@@ -42,6 +46,8 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
 
         mLayout = findViewById(R.id.idReportarPerdido_layout);
         viewCamera = findViewById(R.id.imageViewFotoPerdido);
+
+        mAuth = FirebaseAuth.getInstance();
 
         // Register a listener for the 'Show Camera Preview' button.
 
@@ -247,5 +253,15 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
 //            startActivityForResult(takePictureIntent,PERMISSION_REQUEST_CAMERA);
         //      }
     }
+
+    public void Salir(View v){
+        //cierre sesion
+        mAuth.signOut();
+        //UpdateUi
+        Intent intent=new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 
 }

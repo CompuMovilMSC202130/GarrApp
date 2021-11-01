@@ -41,13 +41,14 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/imageSalir"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/nada"
             android:paddingHorizontal="20dp"
             android:scaleType="fitCenter"
+            android:onClick="Salir"
             app:srcCompat="@drawable/ic_logout"
             app:tint="@color/white" />
 

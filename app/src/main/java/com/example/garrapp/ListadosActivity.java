@@ -15,6 +15,7 @@ import android.widget.Button;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ListadosActivity extends AppCompatActivity {
 
@@ -26,11 +27,15 @@ public class ListadosActivity extends AppCompatActivity {
     ViewPager2 pager2;
     ListasAdapter adapter;
 
+    //Firebase Auth
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listados);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
         // barra de navegación inferior, casos para el cambio
@@ -109,6 +114,14 @@ public class ListadosActivity extends AppCompatActivity {
 
     }
 
+    public void Salir(View v){
+        //cierre sesion
+        mAuth.signOut();
+        //UpdateUi
+        Intent intent=new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 
 
 }

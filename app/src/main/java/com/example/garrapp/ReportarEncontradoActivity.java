@@ -20,6 +20,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -34,11 +35,14 @@ public class ReportarEncontradoActivity extends AppCompatActivity {
     private View mLayout;
     private ImageView viewCamera;
 
+    //FirebaseAuth
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportar_encontrado);
-
+        mAuth=FirebaseAuth.getInstance();
 
         mLayout = findViewById(R.id.idReportarEncontrado_layout);
         viewCamera = findViewById(R.id.imageViewFotoEncontrado);
@@ -296,6 +300,15 @@ public class ReportarEncontradoActivity extends AppCompatActivity {
         //if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
 //            startActivityForResult(takePictureIntent,PERMISSION_REQUEST_CAMERA);
         //      }
+    }
+
+    public void Salir(View v){
+        //cierre sesion
+        mAuth.signOut();
+        //UpdateUi
+        Intent intent=new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 
