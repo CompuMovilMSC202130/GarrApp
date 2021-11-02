@@ -21,7 +21,7 @@ public class Registro extends AppCompatActivity {
 
     public void MapsActivity(View v)
     {
-        startActivity(new Intent(this,MapsActivity2.class));
+        startActivity(new Intent(this,MapsActivity.class));
     }
 
     public void AnimalesEncontradosActivity(View v)

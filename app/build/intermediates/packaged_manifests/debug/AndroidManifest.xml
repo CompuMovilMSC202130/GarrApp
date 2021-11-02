@@ -69,9 +69,6 @@
             android:name="com.example.garrapp.TusReportesActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.garrapp.MapsActivity2"
-            android:exported="true" />
-        <activity
             android:name="com.example.garrapp.AnimalesEncontrados"
             android:exported="true" />
         <activity

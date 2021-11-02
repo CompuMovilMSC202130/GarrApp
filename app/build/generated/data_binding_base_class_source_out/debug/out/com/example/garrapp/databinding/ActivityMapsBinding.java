@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,20 +24,70 @@ public final class ActivityMapsBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final LinearLayout barraSuperior;
+
+  @NonNull
   public final Button botonRuta;
 
   @NonNull
   public final BottomNavigationView bottomNav;
 
   @NonNull
+  public final ConstraintLayout constraintLayout2;
+
+  @NonNull
+  public final ImageButton idAliados;
+
+  @NonNull
+  public final ImageButton idEncontrados;
+
+  @NonNull
+  public final ImageButton idPerdidos;
+
+  @NonNull
+  public final ImageButton idPolicia;
+
+  @NonNull
+  public final ImageButton idShop;
+
+  @NonNull
+  public final ImageButton idVeterinaria;
+
+  @NonNull
+  public final ImageButton imageButton3;
+
+  @NonNull
+  public final ImageButton imageSalir;
+
+  @NonNull
   public final ConstraintLayout mapsLyt;
 
-  private ActivityMapsBinding(@NonNull ConstraintLayout rootView, @NonNull Button botonRuta,
-      @NonNull BottomNavigationView bottomNav, @NonNull ConstraintLayout mapsLyt) {
+  @NonNull
+  public final TextView textView;
+
+  private ActivityMapsBinding(@NonNull ConstraintLayout rootView,
+      @NonNull LinearLayout barraSuperior, @NonNull Button botonRuta,
+      @NonNull BottomNavigationView bottomNav, @NonNull ConstraintLayout constraintLayout2,
+      @NonNull ImageButton idAliados, @NonNull ImageButton idEncontrados,
+      @NonNull ImageButton idPerdidos, @NonNull ImageButton idPolicia, @NonNull ImageButton idShop,
+      @NonNull ImageButton idVeterinaria, @NonNull ImageButton imageButton3,
+      @NonNull ImageButton imageSalir, @NonNull ConstraintLayout mapsLyt,
+      @NonNull TextView textView) {
     this.rootView = rootView;
+    this.barraSuperior = barraSuperior;
     this.botonRuta = botonRuta;
     this.bottomNav = bottomNav;
+    this.constraintLayout2 = constraintLayout2;
+    this.idAliados = idAliados;
+    this.idEncontrados = idEncontrados;
+    this.idPerdidos = idPerdidos;
+    this.idPolicia = idPolicia;
+    this.idShop = idShop;
+    this.idVeterinaria = idVeterinaria;
+    this.imageButton3 = imageButton3;
+    this.imageSalir = imageSalir;
     this.mapsLyt = mapsLyt;
+    this.textView = textView;
   }
 
   @Override
@@ -64,6 +117,12 @@ public final class ActivityMapsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.barraSuperior;
+      LinearLayout barraSuperior = ViewBindings.findChildViewById(rootView, id);
+      if (barraSuperior == null) {
+        break missingId;
+      }
+
       id = R.id.botonRuta;
       Button botonRuta = ViewBindings.findChildViewById(rootView, id);
       if (botonRuta == null) {
@@ -76,9 +135,71 @@ public final class ActivityMapsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.constraintLayout2;
+      ConstraintLayout constraintLayout2 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.idAliados;
+      ImageButton idAliados = ViewBindings.findChildViewById(rootView, id);
+      if (idAliados == null) {
+        break missingId;
+      }
+
+      id = R.id.idEncontrados;
+      ImageButton idEncontrados = ViewBindings.findChildViewById(rootView, id);
+      if (idEncontrados == null) {
+        break missingId;
+      }
+
+      id = R.id.idPerdidos;
+      ImageButton idPerdidos = ViewBindings.findChildViewById(rootView, id);
+      if (idPerdidos == null) {
+        break missingId;
+      }
+
+      id = R.id.idPolicia;
+      ImageButton idPolicia = ViewBindings.findChildViewById(rootView, id);
+      if (idPolicia == null) {
+        break missingId;
+      }
+
+      id = R.id.idShop;
+      ImageButton idShop = ViewBindings.findChildViewById(rootView, id);
+      if (idShop == null) {
+        break missingId;
+      }
+
+      id = R.id.idVeterinaria;
+      ImageButton idVeterinaria = ViewBindings.findChildViewById(rootView, id);
+      if (idVeterinaria == null) {
+        break missingId;
+      }
+
+      id = R.id.imageButton3;
+      ImageButton imageButton3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageButton3 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageSalir;
+      ImageButton imageSalir = ViewBindings.findChildViewById(rootView, id);
+      if (imageSalir == null) {
+        break missingId;
+      }
+
       ConstraintLayout mapsLyt = (ConstraintLayout) rootView;
 
-      return new ActivityMapsBinding((ConstraintLayout) rootView, botonRuta, bottomNav, mapsLyt);
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      return new ActivityMapsBinding((ConstraintLayout) rootView, barraSuperior, botonRuta,
+          bottomNav, constraintLayout2, idAliados, idEncontrados, idPerdidos, idPolicia, idShop,
+          idVeterinaria, imageButton3, imageSalir, mapsLyt, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

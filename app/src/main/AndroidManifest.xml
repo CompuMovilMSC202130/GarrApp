@@ -48,9 +48,7 @@
         <activity
             android:name=".TusReportesActivity"
             android:exported="true" />
-        <activity
-            android:name=".MapsActivity2"
-            android:exported="true" />
+
         <activity
             android:name=".AnimalesEncontrados"
             android:exported="true" />

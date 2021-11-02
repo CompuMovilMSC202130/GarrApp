@@ -2110,6 +2110,7 @@ id collapseActionView
 id confirm_button
 id constraint
 id constraintLayout
+id constraintLayout2
 id container
 id content
 id contentPanel
@@ -2215,8 +2216,14 @@ id hybrid
 id icon
 id icon_group
 id icon_only
+id idAliados
+id idEncontrados
+id idPerdidos
+id idPolicia
 id idReportarEncontrado_layout
 id idReportarPerdido_layout
+id idShop
+id idVeterinaria
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2607,7 +2614,6 @@ layout activity_listados
 layout activity_login
 layout activity_main
 layout activity_maps
-layout activity_maps2
 layout activity_noticias
 layout activity_principal
 layout activity_registro
