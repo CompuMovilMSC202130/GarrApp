@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="@color/custom"
-            android:drawableTop="@drawable/ic_aliados"
+            android:drawableTop="@drawable/ic_logo"
             android:drawablePadding="0dp"
             android:drawableTint="@color/white"
             android:text="Reportar animal encontrado" />
@@ -92,7 +92,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/custom"
-            android:drawableTop="@drawable/ic_aliados"
+            android:drawableTop="@drawable/ic_logo"
             android:drawablePadding="0dp"
             android:drawableTint="@color/white"
             android:text="Reportar animal perdido" />

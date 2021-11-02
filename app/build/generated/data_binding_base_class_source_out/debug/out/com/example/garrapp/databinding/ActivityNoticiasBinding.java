@@ -4,6 +4,9 @@ package com.example.garrapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,12 +23,30 @@ public final class ActivityNoticiasBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final LinearLayout barraSuperior;
+
+  @NonNull
   public final BottomNavigationView bottomNav;
 
+  @NonNull
+  public final ImageButton imageButton3;
+
+  @NonNull
+  public final ImageButton imageSalir;
+
+  @NonNull
+  public final TextView textView;
+
   private ActivityNoticiasBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNav) {
+      @NonNull LinearLayout barraSuperior, @NonNull BottomNavigationView bottomNav,
+      @NonNull ImageButton imageButton3, @NonNull ImageButton imageSalir,
+      @NonNull TextView textView) {
     this.rootView = rootView;
+    this.barraSuperior = barraSuperior;
     this.bottomNav = bottomNav;
+    this.imageButton3 = imageButton3;
+    this.imageSalir = imageSalir;
+    this.textView = textView;
   }
 
   @Override
@@ -55,13 +76,38 @@ public final class ActivityNoticiasBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.barraSuperior;
+      LinearLayout barraSuperior = ViewBindings.findChildViewById(rootView, id);
+      if (barraSuperior == null) {
+        break missingId;
+      }
+
       id = R.id.bottom_nav;
       BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
       if (bottomNav == null) {
         break missingId;
       }
 
-      return new ActivityNoticiasBinding((ConstraintLayout) rootView, bottomNav);
+      id = R.id.imageButton3;
+      ImageButton imageButton3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageButton3 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageSalir;
+      ImageButton imageSalir = ViewBindings.findChildViewById(rootView, id);
+      if (imageSalir == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      return new ActivityNoticiasBinding((ConstraintLayout) rootView, barraSuperior, bottomNav,
+          imageButton3, imageSalir, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

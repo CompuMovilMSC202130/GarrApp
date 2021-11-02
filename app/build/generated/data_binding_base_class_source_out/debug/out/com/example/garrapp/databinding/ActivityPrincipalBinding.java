@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -37,18 +36,6 @@ public final class ActivityPrincipalBinding implements ViewBinding {
   public final Button button2;
 
   @NonNull
-  public final Button button3;
-
-  @NonNull
-  public final Button button6;
-
-  @NonNull
-  public final Button buttonn3;
-
-  @NonNull
-  public final Button buttonn6;
-
-  @NonNull
   public final View divider1;
 
   @NonNull
@@ -64,6 +51,9 @@ public final class ActivityPrincipalBinding implements ViewBinding {
   public final ImageButton imageButton;
 
   @NonNull
+  public final ImageButton imageButton17;
+
+  @NonNull
   public final ImageButton imageButton3;
 
   @NonNull
@@ -76,9 +66,6 @@ public final class ActivityPrincipalBinding implements ViewBinding {
   public final ImageButton imageSalir;
 
   @NonNull
-  public final ImageView imageView1;
-
-  @NonNull
   public final LinearLayout linearLayout2;
 
   @NonNull
@@ -86,6 +73,12 @@ public final class ActivityPrincipalBinding implements ViewBinding {
 
   @NonNull
   public final TextView textView11;
+
+  @NonNull
+  public final TextView textView16;
+
+  @NonNull
+  public final TextView textView17;
 
   @NonNull
   public final TextView textView5;
@@ -104,37 +97,35 @@ public final class ActivityPrincipalBinding implements ViewBinding {
 
   private ActivityPrincipalBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout barraSuperior, @NonNull BottomNavigationView bottomNav,
-      @NonNull Button button, @NonNull Button button2, @NonNull Button button3,
-      @NonNull Button button6, @NonNull Button buttonn3, @NonNull Button buttonn6,
-      @NonNull View divider1, @NonNull View divider2, @NonNull View divider3,
-      @NonNull View divider4, @NonNull ImageButton imageButton, @NonNull ImageButton imageButton3,
-      @NonNull ImageButton imageButton6, @NonNull ImageButton imageButton7,
-      @NonNull ImageButton imageSalir, @NonNull ImageView imageView1,
+      @NonNull Button button, @NonNull Button button2, @NonNull View divider1,
+      @NonNull View divider2, @NonNull View divider3, @NonNull View divider4,
+      @NonNull ImageButton imageButton, @NonNull ImageButton imageButton17,
+      @NonNull ImageButton imageButton3, @NonNull ImageButton imageButton6,
+      @NonNull ImageButton imageButton7, @NonNull ImageButton imageSalir,
       @NonNull LinearLayout linearLayout2, @NonNull TextView textView, @NonNull TextView textView11,
-      @NonNull TextView textView5, @NonNull TextView textView6, @NonNull TextView textView7,
-      @NonNull TextView textView8, @NonNull TextView textView9) {
+      @NonNull TextView textView16, @NonNull TextView textView17, @NonNull TextView textView5,
+      @NonNull TextView textView6, @NonNull TextView textView7, @NonNull TextView textView8,
+      @NonNull TextView textView9) {
     this.rootView = rootView;
     this.barraSuperior = barraSuperior;
     this.bottomNav = bottomNav;
     this.button = button;
     this.button2 = button2;
-    this.button3 = button3;
-    this.button6 = button6;
-    this.buttonn3 = buttonn3;
-    this.buttonn6 = buttonn6;
     this.divider1 = divider1;
     this.divider2 = divider2;
     this.divider3 = divider3;
     this.divider4 = divider4;
     this.imageButton = imageButton;
+    this.imageButton17 = imageButton17;
     this.imageButton3 = imageButton3;
     this.imageButton6 = imageButton6;
     this.imageButton7 = imageButton7;
     this.imageSalir = imageSalir;
-    this.imageView1 = imageView1;
     this.linearLayout2 = linearLayout2;
     this.textView = textView;
     this.textView11 = textView11;
+    this.textView16 = textView16;
+    this.textView17 = textView17;
     this.textView5 = textView5;
     this.textView6 = textView6;
     this.textView7 = textView7;
@@ -193,30 +184,6 @@ public final class ActivityPrincipalBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button3;
-      Button button3 = ViewBindings.findChildViewById(rootView, id);
-      if (button3 == null) {
-        break missingId;
-      }
-
-      id = R.id.button6;
-      Button button6 = ViewBindings.findChildViewById(rootView, id);
-      if (button6 == null) {
-        break missingId;
-      }
-
-      id = R.id.buttonn3;
-      Button buttonn3 = ViewBindings.findChildViewById(rootView, id);
-      if (buttonn3 == null) {
-        break missingId;
-      }
-
-      id = R.id.buttonn6;
-      Button buttonn6 = ViewBindings.findChildViewById(rootView, id);
-      if (buttonn6 == null) {
-        break missingId;
-      }
-
       id = R.id.divider1;
       View divider1 = ViewBindings.findChildViewById(rootView, id);
       if (divider1 == null) {
@@ -247,6 +214,12 @@ public final class ActivityPrincipalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageButton17;
+      ImageButton imageButton17 = ViewBindings.findChildViewById(rootView, id);
+      if (imageButton17 == null) {
+        break missingId;
+      }
+
       id = R.id.imageButton3;
       ImageButton imageButton3 = ViewBindings.findChildViewById(rootView, id);
       if (imageButton3 == null) {
@@ -271,12 +244,6 @@ public final class ActivityPrincipalBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView1;
-      ImageView imageView1 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView1 == null) {
-        break missingId;
-      }
-
       id = R.id.linearLayout2;
       LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout2 == null) {
@@ -292,6 +259,18 @@ public final class ActivityPrincipalBinding implements ViewBinding {
       id = R.id.textView11;
       TextView textView11 = ViewBindings.findChildViewById(rootView, id);
       if (textView11 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView16;
+      TextView textView16 = ViewBindings.findChildViewById(rootView, id);
+      if (textView16 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView17;
+      TextView textView17 = ViewBindings.findChildViewById(rootView, id);
+      if (textView17 == null) {
         break missingId;
       }
 
@@ -326,10 +305,9 @@ public final class ActivityPrincipalBinding implements ViewBinding {
       }
 
       return new ActivityPrincipalBinding((ConstraintLayout) rootView, barraSuperior, bottomNav,
-          button, button2, button3, button6, buttonn3, buttonn6, divider1, divider2, divider3,
-          divider4, imageButton, imageButton3, imageButton6, imageButton7, imageSalir, imageView1,
-          linearLayout2, textView, textView11, textView5, textView6, textView7, textView8,
-          textView9);
+          button, button2, divider1, divider2, divider3, divider4, imageButton, imageButton17,
+          imageButton3, imageButton6, imageButton7, imageSalir, linearLayout2, textView, textView11,
+          textView16, textView17, textView5, textView6, textView7, textView8, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

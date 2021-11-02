@@ -9,10 +9,11 @@ com/example/garrapp/ReportarEncontradoActivity.java
  com.example.garrapp.ReportarEncontradoActivity$5
 com/example/garrapp/RegistroFragment.java
  com.example.garrapp.RegistroFragment
-com/example/garrapp/PerdidosFragment.java
- com.example.garrapp.PerdidosFragment
+com/example/garrapp/databinding/ActivityMapsBinding.java
+ com.example.garrapp.databinding.ActivityMapsBinding
 com/example/garrapp/InstitucionesAliadasActivity.java
  com.example.garrapp.InstitucionesAliadasActivity
+ com.example.garrapp.InstitucionesAliadasActivity$1
 com/example/garrapp/databinding/ActivityListadosBinding.java
  com.example.garrapp.databinding.ActivityListadosBinding
 com/example/garrapp/databinding/FragmentLoginBinding.java
@@ -66,8 +67,15 @@ com/example/garrapp/TusPerdidosFragment.java
 com/example/garrapp/NoticiasActivity.java
  com.example.garrapp.NoticiasActivity
  com.example.garrapp.NoticiasActivity$1
-com/example/garrapp/databinding/FragmentEncontradosBinding.java
- com.example.garrapp.databinding.FragmentEncontradosBinding
+com/example/garrapp/MapsActivity.java
+ com.example.garrapp.MapsActivity
+ com.example.garrapp.MapsActivity$1
+ com.example.garrapp.MapsActivity$2
+ com.example.garrapp.MapsActivity$3
+ com.example.garrapp.MapsActivity$4
+ com.example.garrapp.MapsActivity$5
+ com.example.garrapp.MapsActivity$6
+ com.example.garrapp.MapsActivity$7
 com/example/garrapp/databinding/ActivityReportarBinding.java
  com.example.garrapp.databinding.ActivityReportarBinding
 com/example/garrapp/databinding/FragmentTusEncontradosBinding.java
@@ -107,14 +115,7 @@ com/example/garrapp/TusEncontradosFragment.java
  com.example.garrapp.TusEncontradosFragment
 com/example/garrapp/utilidades/PointsParser.java
  com.example.garrapp.utilidades.PointsParser
-com/example/garrapp/databinding/ActivityMapsBinding.java
- com.example.garrapp.databinding.ActivityMapsBinding
-com/example/garrapp/MapsActivity.java
- com.example.garrapp.MapsActivity
- com.example.garrapp.MapsActivity$1
- com.example.garrapp.MapsActivity$2
- com.example.garrapp.MapsActivity$3
- com.example.garrapp.MapsActivity$4
- com.example.garrapp.MapsActivity$5
- com.example.garrapp.MapsActivity$6
- com.example.garrapp.MapsActivity$7
+com/example/garrapp/databinding/FragmentEncontradosBinding.java
+ com.example.garrapp.databinding.FragmentEncontradosBinding
+com/example/garrapp/PerdidosFragment.java
+ com.example.garrapp.PerdidosFragment

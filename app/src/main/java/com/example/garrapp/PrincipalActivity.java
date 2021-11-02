@@ -79,6 +79,18 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(new Intent(this, InstitucionesAliadasActivity.class));
     }
 
+    public void ListadosIsPressed(View v){
+        startActivity(new Intent(this, ListadosActivity.class));
+    }
+
+    public void MapsIsPressed(View v){
+        startActivity(new Intent(this, MapsActivity.class));
+    }
+
+    public void NewsIsPressed(View v){
+        startActivity(new Intent(this, NoticiasActivity.class));
+    }
+
     public void Salir(View v){
         //cierre sesion
         mAuth.signOut();
