@@ -368,7 +368,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 isGPSEnabled = true;
                 startLocationUpdate();
             } else {
-                startActivity(new Intent(MapsActivity.this, MainActivity.class));
+                startActivity(new Intent(MapsActivity.this, PrincipalActivity.class));
                 Toast.makeText(this, "No se puede usar esta funcionalidad", Toast.LENGTH_LONG).show();
             }
         }
@@ -431,7 +431,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 searchMarker = mMap.addMarker(new MarkerOptions().position(destination).title(address).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
                 markers.add(searchMarker);
-                zoomMarkers();
+                //zoomMarkers();
                 //mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
 
                 String url = getUrl(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude,transport);

@@ -23,8 +23,10 @@
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="413dp"
-        android:layout_height="733dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="60dp"
         map:layout_constraintBottom_toBottomOf="@+id/bottom_nav"
         map:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
 
@@ -104,11 +106,12 @@
             android:id="@+id/botonRuta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="70dp"
             android:text="Ruta"
             map:layout_constraintBottom_toBottomOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp" />
+            map:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <ImageButton
             android:id="@+id/idVeterinaria"
