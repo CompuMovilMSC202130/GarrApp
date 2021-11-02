@@ -50,6 +50,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'androidx.work:work-runtime:2.5.0'
+    implementation "androidx.biometric:biometric:1.1.0"
+
+
 
 
 

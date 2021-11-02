@@ -2,7 +2,10 @@ package com.example.garrapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -24,6 +27,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.concurrent.Executor;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -55,6 +60,55 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+        /****************************  FingerPrint************************************************/
+
+
+        BiometricManager biometricManager = BiometricManager.from(this);
+
+        Executor executor = ContextCompat.getMainExecutor(this);
+
+        BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                Toast.makeText(getApplicationContext(), "Login Sucess", Toast.LENGTH_SHORT).show();
+                String emailS = "a@mail.com";
+                String passS = "123456";
+
+                mAuth.signInWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            updateUI(mAuth.getCurrentUser());
+                        }else{
+                            Log.e(TAG,"Autentificación fallida: "+task.getException().toString());
+                            Toast.makeText(LoginActivity.this, task.getException().toString(),Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+
+                super.onAuthenticationSucceeded(result);
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+            }
+        });
+
+
+        BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder().setTitle("Login").setDescription("Usa tu huella para ingresar a GarrApp")
+                .setNegativeButtonText("Cancelar").build();
+
+
+
+
         //inflate
         mAuth=FirebaseAuth.getInstance();
 
@@ -81,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         // Log and toast
                         Log.d(TAG, token);
-                        Toast.makeText(LoginActivity.this, token, Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(LoginActivity.this, token, Toast.LENGTH_SHORT).show();
                     }
                 });
         tabLayout.addTab(tabLayout.newTab().setText("Ingreso"));
@@ -109,6 +163,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
+
+
+
+
+
+
             }
         });
 
@@ -135,7 +195,12 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
 
-
+        floatingActionButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                biometricPrompt.authenticate(promptInfo);
+            }
+        });
 
 
 
