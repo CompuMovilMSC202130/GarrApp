@@ -14,22 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <EditText
-        android:id="@+id/searchMap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/roundcorner"
-        android:hint="@string/hintAddress"
-        android:imeOptions="actionSearch"
-        android:inputType="text"
-        android:minHeight="48dp"
-        map:layout_constraintEnd_toEndOf="parent"
-        map:layout_constraintStart_toStartOf="parent"
-        map:layout_constraintTop_toTopOf="parent" />
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -42,5 +26,15 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:menu="@menu/menu" />
+
+    <Button
+        android:id="@+id/botonRuta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ruta"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

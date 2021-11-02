@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_login.xml" value="0.15625" />
+        <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.14010416666666667" />
+        <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.3333333333333333" />
+        <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_principal.xml" value="0.15625" />
+        <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_registro.xml" value="0.15625" />
         <entry key="..\:/Users/Milo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_login.xml" value="0.29907407407407405" />
         <entry key="..\:/Users/Milo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Milo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_registro.xml" value="0.36666666666666664" />

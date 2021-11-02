@@ -1,8 +1,4 @@
 package com.example.garrapp;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.app.Activity;
@@ -20,11 +16,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
+import com.example.garrapp.databinding.ActivityMapsBinding;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -37,44 +41,41 @@ import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.garrapp.databinding.ActivityMapsBinding;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import com.example.garrapp.utilidades.FetchURL;
+import com.example.garrapp.utilidades.TaskLoadedCallback;
+import android.graphics.Color;
 import java.io.IOException;
-import java.io.Writer;
+import java.util.ArrayList;
 import java.util.List;
 
 
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, TaskLoadedCallback {
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-    private EditText search;
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private Marker searchMarker;
     private Marker touchMarker;
     private Marker locationMarker;
     LatLng aLatLng = new LatLng(4.65, -74.05);
-    boolean isNewPos = false;
+    LatLng destination;
+    private Button ruta;
 
     // botones de barra inferior
     BottomNavigationView bottomNavigationView;
@@ -97,7 +98,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
     static final int REQUEST_CHECK_SETTINGS = 6;
+    private final int RADIUS_OF_EARTH_KM = 6371;
+    Polyline currentPolyline;
+    private List<Marker> markers = new ArrayList<Marker>();
     boolean isGPSEnabled = false;
+
+
     /****************************      ON CREATE  ***********************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +112,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         locationRequest = createLocationRequest();
         locationCallback = createLocationCallback();
         myRequestPermission(this, locationPermission, "Access to GPS", PERMISSION_LOCATION);
+
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -149,11 +156,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
-
-
-
-
-
         mGeocoder = new Geocoder(this);
 
         // Light Sensor
@@ -168,28 +170,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
 
-        //React to the send button in the keyboard
-        search = findViewById(R.id.searchMap);
-        search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                if(i == EditorInfo.IME_ACTION_SEARCH) {
-                    String address = search.getText().toString();
-                    LatLng position = searchByName(address);
-                    if (position != null & mMap != null) {
-                        if (searchMarker != null) searchMarker.remove();
-                        searchMarker = mMap.addMarker(new MarkerOptions()
-                                .position(position).title(address)
-                                .icon(BitmapDescriptorFactory
-                                        .defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
+        mapFragment.getMapAsync(this);
 
-                    }
-                }
-                return true;
+        ruta = (Button) findViewById(R.id.botonRuta);
+
+        ruta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                generateRoute("driving");
             }
         });
-        mapFragment.getMapAsync(this);
     }
 
     /***********************************************************************************************
@@ -217,41 +207,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 if(location != null){
                     Log.i ( "TAG" , "location" + location.toString());
-                    // Add a marker in Sydney and move the camera
                     LatLng bogota = new LatLng(location.getLatitude(), location.getLongitude()); // Guardamos la posición
                     /************************  JSON***********************************************/
                     if (locationMarker == null){
                         locationMarker = mMap.addMarker(new MarkerOptions().position(bogota).title("Usted esta aqui"));
                     }
-
-   /*
-                    JSONObject obj = new JSONObject();
-                    try {
-                        obj.put("latitud", location.getLatitude());
-                        obj.put("longitud", location.getLongitude());
-                        obj.put("date", location.getTime());
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    Writer output = null;
-                    String filename= "locations.json";
-                try {
-                          File file = new File(getBaseContext().getExternalFilesDir(null), filename);
-                        FileWriter fileWriter = new FileWriter(file);
-                        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                        bufferedWriter.write(obj.toString());
-                        bufferedWriter.close();
-
-                        Log.i("LOCATION", "Ubicacion de archivo: "+file);
-                        // output = new BufferedWriter(new FileWriter(file));
-                        // output.write(obj.toString());
-                        // output.close();
-                        Toast.makeText(getApplicationContext(), "Location saved",
-                                Toast.LENGTH_SHORT).show();
-                    } catch (Exception e) {
-                        //Log error
-                    }
-*/
 
                     /********************* Comparar con el anterior*******************************/
                     Location locationOne = new Location("");
@@ -283,8 +243,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
-
     private SensorEventListener createSensorEventListener(){
         SensorEventListener lightSensorListener = new SensorEventListener() {
             @Override
@@ -306,15 +264,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return lightSensorListener;
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -325,36 +275,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             public void onMapLongClick(@NonNull LatLng latLng) {
 
-                //String name = "Prueba";
-                String name = searchByLocation(latLng.latitude , latLng.longitude);
+               String name = searchByLocation(latLng.latitude , latLng.longitude);
 
                 if(!"".equals(name)){
                     if(touchMarker!=null) touchMarker.remove();
                     touchMarker = mMap.addMarker(new MarkerOptions()
                             .position(latLng).title(name)
                             .icon(BitmapDescriptorFactory
-                                    .defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+                                    .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                    destination = new LatLng(latLng.latitude,latLng.longitude);
 
                 }
             }
         });
-
-/*
-        //Información adicional.
-        mMap.addMarker(new MarkerOptions().position(bogota)
-                .title("BOGOTÁ")
-                .snippet("Población: 8.081.000") //Texto de información
-                .alpha(0.5f)); //Transparencia
-
-        // Simbolo del marcador
-        Marker bogotaAzul = mMap.addMarker(new MarkerOptions()
-                .position(bogota)
-                .icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-
-  */
-    }
-
+  }
 
     @Override
     protected void onResume() {
@@ -438,40 +372,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    /***********************************************************************************************
-     **                                 searchByName
-     **********************************************************************************************/
-
-    private  LatLng searchByName(String addressString){
-
-        if (!addressString.isEmpty()) {
-            try {
-                List<Address> addresses = mGeocoder.getFromLocationName(addressString, 2);
-                if (addresses != null && !addresses.isEmpty()) {
-                    Address addressResult = addresses.get(0);
-                    LatLng position = new LatLng(addressResult.getLatitude(), addressResult.getLongitude());
-                    Location oldLocation = new Location("");
-                    oldLocation.setLatitude(position.latitude);
-                    oldLocation.setLongitude(position.longitude);
-
-                    /**************************** Calcula distancia **********************************/
-                    float distanceInMetersOne = oldLocation.distanceTo(newLocation);
-                    //Distancia
-                    Toast.makeText(this, "Distancia " + distanceInMetersOne + " m" , Toast.LENGTH_LONG).show();
-
-                    return  position;
-
-                } else {Toast.makeText(MapsActivity.this, "Dirección no encontrada", Toast.LENGTH_SHORT).show();}
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {Toast.makeText(MapsActivity.this, "La dirección esta vacía", Toast.LENGTH_SHORT).show();}
-        return new LatLng(4.65, -74.05);
-    }
-    /***********************************************************************************************
-     **                                 searchByLocation
-     **********************************************************************************************/
-
+    // ***********************************************************************************************
+    // **         Devuelve el nombre de una ubicación a partir de las coordenadas
+    // **********************************************************************************************/
 
     private String searchByLocation(double latitude , double longitude){
         try {
@@ -497,10 +400,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-
-
-
-
     /***********************************************************************************************
      **                                 PERMISOS DE LOCALIZACION
      **********************************************************************************************/
@@ -516,18 +415,91 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-//Log error
+    /***********************************************************************************************
+     **                                 GENERAR RUTA ENTRE DOS PUNTOS
+     **********************************************************************************************/
 
-    //@Override
-    //public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-    //    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    //   if (requestCode == PERMISSION_LOCATION){
-    //       accessLocation();
-    ///    }
-    //  }
+    private void generateRoute (String transport){
+
+        if (destination == null){
+            Toast.makeText(this, "No se encuentra punto de destino", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            String address = searchByLocation(destination.latitude,destination.longitude);
+            if (destination != null && mMap != null) {
+                if (searchMarker != null) {
+                    markers.remove(searchMarker);
+                    searchMarker.remove();
+                }
+                searchMarker = mMap.addMarker(new MarkerOptions().position(destination).title(address).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                markers.add(searchMarker);
+                zoomMarkers();
+                //mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
+
+                String url = getUrl(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude,transport);
+                new FetchURL(this).execute(url,transport);
+
+                double distancia = distance(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude);
+                Toast.makeText(this, "Distancia hasta el punto buscado: "+distancia, Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    /***********************************************************************************************
+     **                                MÉTODO PARA OBTENER RUTA DESDE API DE MAPS
+     **********************************************************************************************/
+
+    private String getUrl(double destinationLatitude, double destinationLongitude, double originLatitude, double originLongitude, String transport) {
+        String str_origin = "origin=" + originLatitude + "," + originLongitude;
+        String str_destination = "destination=" + destinationLatitude + "," + destinationLongitude;
+        String mode = "mode=" + transport;
+        String parameters = str_origin + "&" + str_destination + "&" + mode;
+        String output = "json";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=" + getString(R.string.google_maps_key);
+        return url;
+    }
+
+    /***********************************************************************************************
+     **                                METODO QUE CALCULA LA DISTANCIA ENTRE DOS PUNTOS
+     **********************************************************************************************/
+
+    //metodo para calcular la distancia entre dos puntos
+    public double distance(double lat1, double long1, double lat2, double long2) {
+        double latDistance = Math.toRadians(lat1 - lat2);
+        double lngDistance = Math.toRadians(long1 - long2);
+        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) * Math.sin(lngDistance / 2) * Math.sin(lngDistance / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); double result = RADIUS_OF_EARTH_KM * c;
+        return Math.round(result*100.0)/100.0;
+    }
 
 
+    /***********************************************************************************************
+     **                                METODO QUE DIBUJA LA RUTA ENTRE DOS PUNTOS
+     **********************************************************************************************/
 
+    @Override
+    public void onTaskDone(Object... values) {
+        if( currentPolyline != null){
+            currentPolyline.remove();
+        }
+        currentPolyline = mMap.addPolyline((PolylineOptions)values[0]);
+        currentPolyline.setColor(Color.MAGENTA);
+
+    }
+
+
+    private void zoomMarkers() {
+        if (markers.size() > 0 && markers != null) {
+            LatLngBounds.Builder builder = new LatLngBounds.Builder();
+            for (Marker marker : markers) {
+                builder.include(marker.getPosition());
+            }
+            LatLngBounds bounds = builder.build();
+            int padding = 200; // offset from edges of the map in pixels
+            CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
+            mMap.animateCamera(cu);
+        }
+    }
 
 }
 
