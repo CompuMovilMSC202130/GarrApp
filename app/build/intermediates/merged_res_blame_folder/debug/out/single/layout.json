@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_registro.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\fragment_registro.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_noticias.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_noticias.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_animales_encontrados.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_animales_encontrados.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps2.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_maps2.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reportar_encontrado.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_reportar_encontrado.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reportar.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_reportar.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_listados.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_listados.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tus_encontrados.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\fragment_tus_encontrados.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_encontrados.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\fragment_encontrados.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_registro.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_registro.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_instituciones_aliadas.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_instituciones_aliadas.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_principal.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_principal.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tusreportes.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_tusreportes.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reportar_perdido.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\activity_reportar_perdido.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_perdidos.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\fragment_perdidos.xml"
+    },
+    {
+        "merged": "A:\\Diego\\AppGarra\\GarrApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tus_perdidos.xml",
+        "source": "A:\\Diego\\AppGarra\\GarrApp\\app\\src\\main\\res\\layout\\fragment_tus_perdidos.xml"
+    }
+]

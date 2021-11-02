@@ -47,6 +47,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.ButtCap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -63,6 +64,7 @@ import com.example.garrapp.utilidades.TaskLoadedCallback;
 import android.graphics.Color;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.List;
 
 
@@ -386,10 +388,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 oldLocation.setLatitude(latitude);
                 oldLocation.setLongitude(longitude);
 
-                /**************************** Calcula distancia **********************************/
-                float distanceInMetersOne = oldLocation.distanceTo(newLocation);
-                //Distancia
-                Toast.makeText(this, "Distancia " + distanceInMetersOne + " m" , Toast.LENGTH_LONG).show();
                 return  namePos;
 
             } else {Toast.makeText(MapsActivity.this, "Nombre no encontrada", Toast.LENGTH_SHORT).show();}
@@ -440,10 +438,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new FetchURL(this).execute(url,transport);
 
                 double distancia = distance(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude);
-                Toast.makeText(this, "Distancia hasta el punto buscado: "+distancia, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Distancia hasta el punto buscado: "+distancia+ " Km", Toast.LENGTH_SHORT).show();
             }
         }
     }
+
 
     /***********************************************************************************************
      **                                MÉTODO PARA OBTENER RUTA DESDE API DE MAPS
@@ -484,7 +483,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         currentPolyline = mMap.addPolyline((PolylineOptions)values[0]);
         currentPolyline.setColor(Color.MAGENTA);
-
     }
 
 
