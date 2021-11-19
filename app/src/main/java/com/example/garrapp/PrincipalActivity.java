@@ -4,16 +4,25 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    SensorManager sensorManager;
+    Sensor tempSensor;
+    SensorEventListener tempSensorListener;
 
     //Firebase Auth
     private FirebaseAuth mAuth;
@@ -24,7 +33,31 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
         mAuth = FirebaseAuth.getInstance();
 
+        // Light Sensor
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        tempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+        tempSensorListener = createSensorEventListener();
+
         ButtomBar();
+
+
+
+    }
+
+    private SensorEventListener createSensorEventListener() {
+
+        SensorEventListener tempSensorListener = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+
+                Log.i("TEMP", "valor" + sensorEvent.values[0]);
+
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {}
+        };
+        return tempSensorListener;
 
     }
 
@@ -100,6 +133,18 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManager.registerListener(tempSensorListener, tempSensor,
+                SensorManager.SENSOR_DELAY_NORMAL);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(tempSensorListener);
+
+    }
 
 }

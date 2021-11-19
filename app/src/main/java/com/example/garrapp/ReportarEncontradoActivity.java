@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -42,10 +43,13 @@ public class ReportarEncontradoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportar_encontrado);
+        FirebaseMessaging.getInstance().subscribeToTopic("all");
+
         mAuth=FirebaseAuth.getInstance();
 
         mLayout = findViewById(R.id.idReportarEncontrado_layout);
         viewCamera = findViewById(R.id.imageViewFotoEncontrado);
+
 
         // Register a listener for the 'Show Camera Preview' button.
         findViewById(R.id.button_open_camerae).setOnClickListener(new View.OnClickListener() {
@@ -61,6 +65,19 @@ public class ReportarEncontradoActivity extends AppCompatActivity {
                 accessMediaPreview();
             }
         });
+
+        findViewById(R.id.FinalizarReporteEncontrado).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FcmNotificationsSender notificationsSender = new FcmNotificationsSender("/topics/all"," \uD83D\uDC36 Se ha realizado un nuevo reporte",
+                        " Milo se ha perdido :(  Ayudanos a encontrarlo ...", getApplicationContext(),ReportarEncontradoActivity.this);
+
+                notificationsSender.SendNotifications();
+
+
+            }
+        });
+
 
 
         ButtonBar();

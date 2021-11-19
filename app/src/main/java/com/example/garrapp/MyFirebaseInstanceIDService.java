@@ -8,16 +8,23 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
+
 
 public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
     private static final String TAG = "MyFirebaseMsgService";
@@ -67,6 +74,7 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
             }
 
         }
+        int resourceImage = getResources().getIdentifier(remoteMessage.getNotification().getIcon(), "drawable", getPackageName());
 
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
@@ -123,18 +131,29 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
 
     }
 
+
     private void showNotification ( String title, String body){
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, PrincipalActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),"channel_id")
+
                 .setContentTitle(title)
+                .setColor(ContextCompat.getColor(this.getApplicationContext(), R.color.teal_200))
                 .setContentText(body)
                 .setSmallIcon(R.drawable.inverse_logo)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.inverse_logo))
+                .setContentIntent(pendingIntent)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(body))
                 .setAutoCancel(true)
+                .setPriority(Notification.PRIORITY_MAX)
+
                 .setContentIntent(PendingIntent.getActivity(getApplicationContext(),0,intent, PendingIntent.FLAG_UPDATE_CURRENT));
+
 
         notificationManager.notify(1,builder.build());
 
