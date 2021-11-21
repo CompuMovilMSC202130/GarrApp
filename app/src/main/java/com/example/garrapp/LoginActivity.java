@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.garrapp.utilidades.Constants;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -22,6 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -60,6 +62,8 @@ public class LoginActivity extends AppCompatActivity {
     //FirebaseAuth
     private FirebaseAuth mAuth;
     DatabaseReference reference;
+    PreferManag preferenceManager;
+
 
     FirebaseUser firebaseUser;
 
@@ -71,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         // firebase intent
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
+        preferenceManager= new PreferManag(getApplicationContext());
 
         /****************************  FingerPrint************************************************/
 
@@ -328,6 +332,8 @@ public class LoginActivity extends AppCompatActivity {
                         HashMap<String, String> hashMap = new HashMap<>();
                         hashMap.put("id", userid);
                         hashMap.put("username", usernameS);
+                        hashMap.put(Constants.KEY_EMAIL , emailS);
+                        hashMap.put(Constants.KEY_PASSWORD , passS);
                         hashMap.put("imageURL", "default");
 
                         reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {

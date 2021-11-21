@@ -49,6 +49,11 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.4.1')
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-core'
+
+
     implementation 'androidx.work:work-runtime:2.5.0'
     implementation "androidx.biometric:biometric:1.1.0"
 
@@ -58,9 +63,7 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:design:27.1.1'
-    implementation 'com.google.firebase:firebase-auth:16.0.2'
-    implementation 'com.google.firebase:firebase-database:16.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.1'
+
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
