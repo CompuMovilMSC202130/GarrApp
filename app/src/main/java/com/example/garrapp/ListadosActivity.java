@@ -84,7 +84,6 @@ public class ListadosActivity extends AppCompatActivity {
         adapter = new ListasAdapter(fm, getLifecycle());
         pager2.setAdapter(adapter);
 
-
         tabLayout.addTab(tabLayout.newTab().setText("Animales perdidos"));
         tabLayout.addTab(tabLayout.newTab().setText("Animales encontrados"));
 

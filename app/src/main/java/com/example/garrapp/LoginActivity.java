@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
@@ -19,6 +18,8 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import android.text.TextUtils;
@@ -28,6 +29,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.HashMap;
 import java.util.concurrent.Executor;
 
 public class LoginActivity extends AppCompatActivity {
@@ -41,11 +43,14 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText email;
     EditText pass;
+    EditText username;
+
     View login_tab_fragment;
     int btnUserid;
 
     String emailS;
     String passS;
+    String usernameS;
 
     Button btn_ingreso;
     Button btn_registro;
@@ -54,11 +59,18 @@ public class LoginActivity extends AppCompatActivity {
 
     //FirebaseAuth
     private FirebaseAuth mAuth;
+    DatabaseReference reference;
+
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // firebase intent
+
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
 
         /****************************  FingerPrint************************************************/
@@ -225,7 +237,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    private boolean validateForm(String emailS,String passwordS)
+    private boolean validateForm(String emailS, String passwordS, String usernameS)
     {
         boolean esValido=true;
 
@@ -233,6 +245,12 @@ public class LoginActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(emailS)){
             esValido=false;
             email.setError("Campo Requerido");
+        }
+
+        usernameS.trim();
+        if(TextUtils.isEmpty(usernameS)){
+            esValido=false;
+            username.setError("Campo Requerido");
         }
 
         passwordS.trim();
@@ -258,9 +276,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void ingresarPresseda (View v){
-        startActivity(new Intent(this, PrincipalActivity.class));
-    }
 
 
     public void ingresarPressed(View v){
@@ -271,7 +286,7 @@ public class LoginActivity extends AppCompatActivity {
         emailS=email.getText().toString();
         passS=pass.getText().toString();
 
-        if(validateForm(emailS,passS))
+        if(validateForm(emailS,passS,emailS))
         {
             mAuth.signInWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -290,17 +305,44 @@ public class LoginActivity extends AppCompatActivity {
     public void registrarPressed(View v){
         email=(EditText) findViewById(R.id.emailR);
         pass=(EditText) findViewById(R.id.passR);
+        username=(EditText) findViewById(R.id.usernameR);
 
         emailS=email.getText().toString();
         passS=pass.getText().toString();
+        usernameS=username.getText().toString();
 
-        if(validateForm(emailS,passS))
+        if(validateForm(emailS,passS,usernameS))
         {
             mAuth.createUserWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        updateUI(mAuth.getCurrentUser());
+                        // updateUI(mAuth.getCurrentUser());
+
+                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                        assert firebaseUser != null;
+                        String userid = firebaseUser.getUid();
+
+                        reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
+
+                        HashMap<String, String> hashMap = new HashMap<>();
+                        hashMap.put("id", userid);
+                        hashMap.put("username", usernameS);
+                        hashMap.put("imageURL", "default");
+
+                        reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()){
+                                    Toast.makeText(LoginActivity.this, "Registro existoso, por favor inicie sesión", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            }
+                        });
+
                     }else{
                         Log.e(TAG,"Autentificación fallida: "+task.getException().toString());
                         Toast.makeText(LoginActivity.this, task.getException().toString(),Toast.LENGTH_LONG).show();
