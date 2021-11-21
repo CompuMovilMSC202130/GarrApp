@@ -16,11 +16,17 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -32,11 +38,23 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
     //Firebase Auth
     private FirebaseAuth mAuth;
 
+    //Realtime DB
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+
     // permisos de la cámara y galeria
     private static final int PERMISSION_REQUEST_CAMERA = 0;
     private static final int PERMISSION_READ_EXTERNAL = 1;
     private View mLayout;
     private ImageView viewCamera;
+
+    EditText  descripcion,ubicacion, foto ;
+    Spinner genero,tamaño,raza;
+
+    Button btnFinalizar;
+
+    public static final String PATH_REPORTES="Reportes/";
+
 
 
     @Override
@@ -48,6 +66,7 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
         viewCamera = findViewById(R.id.imageViewFotoPerdido);
 
         mAuth = FirebaseAuth.getInstance();
+        database=FirebaseDatabase.getInstance();
 
         // Register a listener for the 'Show Camera Preview' button.
 
@@ -57,6 +76,18 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
                 accessMediaPreview();
             }
         });
+
+
+        genero=findViewById(R.id.spinnerGenero);
+        raza= findViewById(R.id.spinnerRaza);
+        descripcion= findViewById(R.id.descripcionp);
+        tamaño=findViewById(R.id.spinner);
+
+        //ubicacion= findViewById(R.id.);
+        //foto= findViewById(R.id.imageViewFotoEncontrado);
+
+
+        btnFinalizar =findViewById(R.id.FinalizarReportePerdido);
 
 
         ButtonBar();
@@ -261,6 +292,42 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
         Intent intent=new Intent(this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    public void EnviarReporte(View v){
+        myRef=database.getReference("Reportes");
+        //myRef.setValue("Hello World");
+
+        String generoS=genero.getSelectedItem().toString();
+        String razaS=raza.getSelectedItem().toString();
+        String tamañoS= tamaño.getSelectedItem().toString();
+        String descripcionS=descripcion.getText().toString();
+        if (validateForm(generoS,razaS,tamañoS,descripcionS)){
+            //myRef=database.getReference(PATH_REPORTES+mAuth.getUid());
+            String key=myRef.push().getKey();
+            myRef=database.getReference(PATH_REPORTES+key);
+
+            Reporte reporte=new Reporte();
+            reporte.setGenero(generoS);
+            reporte.setRaza(razaS);
+            reporte.setTamaño(tamañoS);
+            reporte.setDescripción(descripcionS);
+            myRef.setValue(reporte);
+
+            Toast.makeText(ReportarPerdidoActivity.this, "Reporte creado exitosamente",Toast.LENGTH_LONG).show();
+
+
+            genero.setSelection(0);
+            raza.setSelection(0);
+            descripcion.setText("");
+            tamaño.setSelection(0);
+
+        }
+
+    }
+
+    private boolean validateForm(String generoS, String razaS, String tamañoS, String descripcionS) {
+        return true;
     }
 
 
