@@ -43,4 +43,109 @@
     <string name="mapa_garrapp">Mapa GarrApp</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum laoreet quam, ac iaculis tortor molestie rutrum. Praesent posuere consequat lacus, sed sagittis massa finibus sed. Mauris sit amet congue ligula, vel aliquet urna. Proin mollis, erat faucibus porttitor lobortis, erat velit hendrerit lacus, ac cursus neque sem id ante. Vivamus gravida sit amet diam sit amet molestie. Nam consequat in felis quis suscipit. Fusce tincidunt ex purus, eu vulputate ante laoreet non. Fusce fringilla fermentum eros, nec ullamcorper sem auctor quis.</string>
 
+    <string-array name="tamanos">
+        <item>Grande</item>
+        <item>Mediano</item>
+        <item>Pequeño</item>
+    </string-array>
+
+    <string-array name="genero">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="raza">
+        <item>Sin determinar</item>
+        <item>Criollo</item>
+        <item>Akita</item>
+        <item>Akita americano</item>
+        <item>Alaskan Husky</item>
+        <item>Alaskan malamute</item>
+        <item>American Foxhound</item>
+        <item>American pit bull terrier</item>
+        <item>Basset de Artois</item>
+        <item>Black and Tan Coonhound</item>
+        <item>Bloodhound (Sabueso de San Huberto)</item>
+        <item>Bobtail</item>
+        <item>Boerboel</item>
+        <item>Border Collie</item>
+        <item>Border terrier</item>
+        <item>Borzoi</item>
+        <item>Bosnian Hound</item>
+        <item>Boston terrier</item>
+        <item>Bouvier des Flandres</item>
+        <item>Boxer</item>
+        <item>Cairn terrier</item>
+        <item>Cesky Terrier</item>
+        <item>Chesapeake Bay Retriever</item>
+        <item>Chihuahua</item>
+        <item>Chow Chow</item>
+        <item>Cirneco del Etna</item>
+        <item>Clumber Spaniel</item>
+        <item>Cocker Spaniel Americano</item>
+        <item>Drever</item>
+        <item>Dunker</item>
+        <item>Elkhound Noruego</item>
+        <item>Elkhound Sueco</item>
+        <item>English Foxhound</item>
+        <item>English Springer Spaniel</item>
+        <item>English Toy Terrier</item>
+        <item>Epagneul Picard</item>
+        <item>Eurasier</item>
+        <item>Fila Brasileiro</item>
+        <item>Finnish Lapphound</item>
+        <item>Flat Coated Retriever</item>
+        <item>Gran Gascón Saintongeois</item>
+        <item>Gran Griffon Vendeano</item>
+        <item>Gran Munsterlander</item>
+        <item>Gran Perro Japonés</item>
+        <item>Grand Anglo Francais Tricoleur</item>
+        <item>Grand Bleu de Gascogne</item>
+        <item>Greyhound</item>
+        <item>Griffon Bleu de Gascogne</item>
+        <item>Griffon de pelo duro (Grifón Korthals)</item>
+        <item>Griffon leonado de Bretaña</item>
+        <item>Griffon Nivernais</item>
+        <item>Grifon Belga</item>
+        <item>Jack Russell terrier</item>
+        <item>Jindo Coreano</item>
+        <item>Kai</item>
+        <item>Keeshond</item>
+        <item>Kelpie australiano (Australian kelpie)</item>
+        <item>Kerry blue terrier</item>
+        <item>King Charles Spaniel</item>
+        <item>Kishu</item>
+        <item>Komondor</item>
+        <item>Lundehund Noruego</item>
+        <item>Malamute de Alaska</item>
+        <item>Maltés</item>
+        <item>Manchester terrier</item>
+        <item>Mastiff</item>
+        <item>Mastín de los Pirineos</item>
+        <item>Sabueso de Istria</item>
+        <item>Sabueso de Posavaz</item>
+        <item>Saluki</item>
+        <item>Samoyedo</item>
+        <item>San Bernardo</item>
+        <item>Sarplaninac</item>
+        <item>Shih Tzu</item>
+        <item>Shikoku</item>
+        <item>Spaniel Bretón</item>
+        <item>Spaniel de Campo</item>
+        <item>Spinone Italiano</item>
+        <item>Spítz Alemán</item>
+        <item>Spitz de Norbotten (Norbottenspets)</item>
+        <item>Spitz Finlandés</item>
+        <item>Spitz Japonés</item>
+        <item>Staffordshire bull terrier</item>
+        <item>Terrier galés</item>
+        <item>Terrier irlandés (Irish terrier)</item>
+        <item>Whippet</item>
+        <item>Wirehaired solvakian pointer</item>
+        <item>Xoloitzcuintle</item>
+        <item>Yorkshire Terrier</item>
+
+    </string-array>
+
+
 </resources>

@@ -299,7 +299,8 @@ public class LoginActivity extends AppCompatActivity {
                         updateUI(mAuth.getCurrentUser());
                     }else{
                         Log.e(TAG,"Autentificación fallida: "+task.getException().toString());
-                        Toast.makeText(LoginActivity.this, task.getException().toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrectos",Toast.LENGTH_LONG).show();
+                        //Toast.makeText(LoginActivity.this, task.getException().toString(),Toast.LENGTH_LONG).show();
                     }
                 }
             });
