@@ -20,6 +20,51 @@
         map:layout_constraintStart_toStartOf="parent"
         map:menu="@menu/menu" />
 
+    <LinearLayout
+        android:id="@+id/barraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/custom"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/nada"
+            android:paddingHorizontal="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logo"
+            map:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imageSalir"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/nada"
+            android:onClick="Salir"
+            android:paddingHorizontal="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logout"
+            map:tint="#FFFFFF" />
+
+    </LinearLayout>
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -33,72 +78,29 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent">
+
 
         <LinearLayout
-            android:layout_width="169dp"
-            android:layout_height="106dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
             android:orientation="vertical"
             map:layout_constraintStart_toStartOf="parent"
-            map:layout_constraintTop_toBottomOf="@+id/barraSuperior">
+            map:layout_constraintTop_toTopOf="parent">
+
 
             <ImageButton
-                android:id="@+id/idEncontrados"
-                android:layout_width="135dp"
-                android:layout_height="51dp"
+                android:id="@+id/idVeretinarias"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
                 android:backgroundTint="@color/custom"
-                map:srcCompat="@drawable/mapasperdidos" />
-
-            <ImageButton
-                android:id="@+id/idPerdidos"
-                android:layout_width="135dp"
-                android:layout_height="51dp"
-                android:backgroundTint="@color/custom"
-                map:srcCompat="@drawable/mapasperdidos" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/barraSuperior"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:background="@color/custom"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            tools:ignore="MissingConstraints">
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/nada"
-                android:paddingHorizontal="20dp"
                 android:scaleType="fitCenter"
-                map:srcCompat="@drawable/ic_logo"
-                map:tint="@color/white" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <ImageButton
-                android:id="@+id/imageSalir"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/nada"
-                android:onClick="Salir"
-                android:paddingHorizontal="20dp"
-                android:scaleType="fitCenter"
-                map:srcCompat="@drawable/ic_logout"
-                map:tint="@color/white" />
+                android:src="@drawable/ic_aliados"
+                />
 
         </LinearLayout>
 
@@ -113,42 +115,7 @@
             map:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <ImageButton
-            android:id="@+id/idVeterinaria"
-            android:layout_width="61dp"
-            android:layout_height="51dp"
-            android:backgroundTint="@color/custom"
-            map:srcCompat="@drawable/mapasveterinaria"
-            tools:layout_editor_absoluteX="167dp"
-            tools:layout_editor_absoluteY="65dp" />
 
-        <ImageButton
-            android:id="@+id/idAliados"
-            android:layout_width="61dp"
-            android:layout_height="51dp"
-            android:backgroundTint="@color/custom"
-            map:srcCompat="@drawable/mapasaliados"
-            tools:layout_editor_absoluteX="228dp"
-            tools:layout_editor_absoluteY="65dp" />
-
-        <ImageButton
-            android:id="@+id/idShop"
-            android:layout_width="61dp"
-            android:layout_height="51dp"
-            android:backgroundTint="@color/custom"
-            map:srcCompat="@drawable/mapasshop"
-            tools:layout_editor_absoluteX="289dp"
-            tools:layout_editor_absoluteY="65dp" />
-
-        <ImageButton
-            android:id="@+id/idPolicia"
-            android:layout_width="61dp"
-            android:layout_height="51dp"
-            android:backgroundTint="@color/custom"
-            map:srcCompat="@drawable/mapaspolicia"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="350dp"
-            tools:layout_editor_absoluteY="65dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
