@@ -7,13 +7,10 @@
     android:padding="10dp"
     tools:context=".ChatMessFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hola"
-        android:textSize="30sp"
-        />
-
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_views"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
 
 
 

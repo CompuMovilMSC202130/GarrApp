@@ -8,16 +8,6 @@
         <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.3333333333333333" />
         <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_principal.xml" value="0.15625" />
         <entry key="..\:/Diego/AppGarra/GarrApp/app/src/main/res/layout/activity_registro.xml" value="0.15625" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_login.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_message.xml" value="0.19479166666666667" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_noticias.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_principal.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_reportar.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_reportar_encontrado.xml" value="0.19479166666666667" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_reportar_perdido.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Julian/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_login.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/Milo/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/garralogo.xml" value="0.2484375" />
         <entry key="..\:/Users/Milo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_login.xml" value="0.29907407407407405" />
         <entry key="..\:/Users/Milo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
@@ -42,8 +32,11 @@
         <entry key="..\:/Users/drizo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/drizo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.42397914856646396" />
         <entry key="..\:/Users/drizo/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_principal.xml" value="0.25416666666666665" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.2203125" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/arrow_back_ios_new_black_24dp.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/background_left.xml" value="0.2203125" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/background_right.xml" value="0.2203125" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/barrainferiorgarra.xml" value="0.2203125" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/barrainferiormapas.xml" value="0.2203125" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/drawable/barrainferiornoticias.xml" value="0.2203125" />
@@ -74,6 +67,7 @@
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps.xml" value="0.18115942028985507" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_maps2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_message.xml" value="0.16576086956521738" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_noticias.xml" value="0.19010416666666666" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_principal.xml" value="0.22" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_prueba_main.xml" value="0.18342391304347827" />
@@ -82,9 +76,15 @@
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_reportar_encontrado.xml" value="0.19010416666666666" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_reportar_perdido.xml" value="0.2" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/activity_tusreportes.xml" value="0.18342391304347827" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/bar_layout.xml" value="0.1" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/chat_item_left.xml" value="0.25" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/chat_item_right.xml" value="0.20416666666666666" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/encontrados_tab_fragment.xml" value="0.19021739130434784" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_blank.xml" value="0.10260416666666666" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_chat_mess.xml" value="0.33" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_chat_users.xml" value="0.1" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_encontrados.xml" value="0.22" />
-        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_login.xml" value="0.12635869565217392" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_login.xml" value="0.14149305555555555" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_perdidos.xml" value="0.1" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_registro.xml" value="0.18659420289855072" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/fragment_tus_encontrados.xml" value="0.18659420289855072" />
@@ -93,6 +93,7 @@
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/perdidos_tab_fragment.xml" value="0.1" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/tusreportesencontrados_tab_fragment.xml" value="0.1" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/tusreportesperdidos_tab_fragment.xml" value="0.19021739130434784" />
+        <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/layout/user_item.xml" value="0.5" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/menu/menu.xml" value="0.1814814814814815" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
         <entry key="..\:/Usuarios/Ingrid/AndroidStudioProjects/GarrApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
