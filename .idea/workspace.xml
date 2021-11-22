@@ -19,8 +19,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17b85da8-d920-4f06-8298-f6511a7e3ced" name="Default Changelist" comment="Marcacion de la ruta">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fingerprint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fingerprint.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637598038242</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Correccion manejo de Ingreso por Biometria Dactilar">
+      <created>1637614370057</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1637614370057</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -422,6 +431,12 @@
                       </list>
                     </value>
                   </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="97" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="96" />
                 </map>
               </option>
             </State>
@@ -450,7 +465,8 @@
     <MESSAGE value="Chat con firebase V1" />
     <MESSAGE value="Varios sin afectacion" />
     <MESSAGE value="Correccion manejo de indices reporte perdidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion manejo de indices reporte perdidos" />
+    <MESSAGE value="Correccion manejo de Ingreso por Biometria Dactilar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion manejo de Ingreso por Biometria Dactilar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -462,12 +478,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java</url>
-          <line>284</line>
+          <line>286</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java</url>
-          <line>283</line>
+          <line>285</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
