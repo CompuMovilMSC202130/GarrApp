@@ -80,7 +80,8 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
         if (remoteMessage.getNotification() != null) {
             String title = remoteMessage.getNotification().getTitle();
             String body = remoteMessage.getNotification().getBody();
-            Log.d(TAG, "Message Notification " + title + " - Body " + body);
+            String casita = remoteMessage.getData().get("idNotification");
+            Log.d(TAG, "Message Notification " + title + " - Body " + body + " - id" + casita) ;
             showNotification(title,body);
         }
 
@@ -132,10 +133,10 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
     }
 
 
-    private void showNotification ( String title, String body){
+    private void showNotification ( String title, String body ){
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-        Intent intent = new Intent(this, PrincipalActivity.class);
+        Intent intent = new Intent(this, ListadosActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 

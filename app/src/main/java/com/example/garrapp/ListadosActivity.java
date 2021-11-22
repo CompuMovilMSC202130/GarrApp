@@ -8,14 +8,24 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.garrapp.Model.Animals;
+import com.example.garrapp.utilidades.Constants;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class ListadosActivity extends AppCompatActivity {
 
@@ -28,7 +38,11 @@ public class ListadosActivity extends AppCompatActivity {
     ListasAdapter adapter;
 
     //Firebase Auth
+
+
     private FirebaseAuth mAuth;
+    DatabaseReference reference;
+    private ArrayList<Animals> nAnimalsList =  new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +50,30 @@ public class ListadosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listados);
 
         mAuth = FirebaseAuth.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference(Constants.KEY_REPORTES);
+        /**************************** Lectura Listado Perdidos *******************/
+
+        myRef.child("Perdido").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                   for (DataSnapshot ds:snapshot.getChildren()){
+                       String raza =  ds.child("raza").getValue().toString();
+                       String genero =  ds.child("genero").getValue().toString();
+                       nAnimalsList.add(new Animals("casa" ,genero , raza , "medio","uno","dos","tres"));
+                       Log.d("RAZA" , raza);
+                   }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
         // barra de navegación inferior, casos para el cambio
@@ -120,6 +158,12 @@ public class ListadosActivity extends AppCompatActivity {
         Intent intent=new Intent(this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+
+
+    private void getAnimalesEncontrados (){
+
     }
 
 

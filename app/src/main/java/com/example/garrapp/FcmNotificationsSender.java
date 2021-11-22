@@ -44,17 +44,19 @@ public class FcmNotificationsSender  {
 
         requestQueue = Volley.newRequestQueue(mActivity);
         JSONObject mainObj = new JSONObject();
+
         try {
             mainObj.put("to", userFcmToken);
+
             JSONObject notiObject = new JSONObject();
             notiObject.put("title", title);
             notiObject.put("body", body);
             notiObject.put("icon", R.drawable.ic_garr); // enter icon that exists in drawable only
-
-
-
-
             mainObj.put("notification", notiObject);
+
+            JSONObject dataObject = new JSONObject();
+            dataObject.put("idNotification", "-Mp5Fa0_2_8_984Rc9PT");
+            mainObj.put("data", dataObject);
 
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, postUrl, mainObj, new Response.Listener<JSONObject>() {

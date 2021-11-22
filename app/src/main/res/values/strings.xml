@@ -44,17 +44,21 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum laoreet quam, ac iaculis tortor molestie rutrum. Praesent posuere consequat lacus, sed sagittis massa finibus sed. Mauris sit amet congue ligula, vel aliquet urna. Proin mollis, erat faucibus porttitor lobortis, erat velit hendrerit lacus, ac cursus neque sem id ante. Vivamus gravida sit amet diam sit amet molestie. Nam consequat in felis quis suscipit. Fusce tincidunt ex purus, eu vulputate ante laoreet non. Fusce fringilla fermentum eros, nec ullamcorper sem auctor quis.</string>
 
     <string-array name="tamanos">
-        <item>Grande</item>
-        <item>Mediano</item>
+        <item></item>
         <item>Pequeño</item>
+        <item>Mediano</item>
+        <item>Grande</item>
     </string-array>
 
     <string-array name="genero">
+        <item></item>
         <item>Masculino</item>
         <item>Femenino</item>
+        <item>Desconocido</item>
     </string-array>
 
     <string-array name="raza">
+        <item></item>
         <item>Sin determinar</item>
         <item>Criollo</item>
         <item>Akita</item>
