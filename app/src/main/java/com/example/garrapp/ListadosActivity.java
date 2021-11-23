@@ -50,11 +50,12 @@ public class ListadosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listados);
 
         mAuth = FirebaseAuth.getInstance();
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference(Constants.KEY_REPORTES);
         /**************************** Lectura Listado Perdidos *******************/
 
-        myRef.child("Perdido").addValueEventListener(new ValueEventListener() {
+        myRef.child("Perdido").child(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
