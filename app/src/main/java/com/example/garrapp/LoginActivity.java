@@ -8,7 +8,9 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.garrapp.utilidades.Constants;
@@ -43,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
     float v =0;
 
 
+
+
     EditText email;
     EditText pass;
     EditText username;
@@ -63,9 +67,11 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     DatabaseReference reference;
     PreferManag preferenceManager;
-
-
     FirebaseUser firebaseUser;
+    ProgressDialog progressDialog;
+    SharedPreferences sharedPreference;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,13 +82,32 @@ public class LoginActivity extends AppCompatActivity {
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         preferenceManager= new PreferManag(getApplicationContext());
+        progressDialog = new ProgressDialog(this);
+
+
+        floatingActionButton1 = findViewById( R.id.floatingActionButton1);
+        floatingActionButton2 = findViewById( R.id.floatingActionButton2);
+        floatingActionButton3 = findViewById( R.id.floatingActionButton3);
 
         /****************************  FingerPrint************************************************/
 
 
+
+
         BiometricManager biometricManager = BiometricManager.from(this);
 
+        sharedPreference = getSharedPreferences("data", MODE_PRIVATE);
+        boolean isLogin = sharedPreference.getBoolean("isLogin",false);
+        if (isLogin){
+            floatingActionButton1.setVisibility(View.VISIBLE);
+        }else{
+            floatingActionButton1.setVisibility(View.GONE);
+
+        }
+
+
         Executor executor = ContextCompat.getMainExecutor(this);
+
 
         BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
             @Override
@@ -93,8 +118,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 Toast.makeText(getApplicationContext(), "Login Sucess", Toast.LENGTH_SHORT).show();
-                String emailS = "a@mail.com";
-                String passS = "123456";
+                progressDialog.setMessage("Login");
+                progressDialog.show();
+                sharedPreference = getSharedPreferences("data", MODE_PRIVATE);
+                String emailS = sharedPreference.getString("email", "");
+                String passS = sharedPreference.getString("password" , "");
+
+
+          //      String emailS = "a@mail.com";
+          //      String passS = "123456";
 
                 mAuth.signInWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -188,11 +220,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        
 
-        floatingActionButton1 = findViewById( R.id.floatingActionButton1);
-        floatingActionButton2 = findViewById( R.id.floatingActionButton2);
-        floatingActionButton3 = findViewById( R.id.floatingActionButton3);
+
+
+
+
+        floatingActionButton3.setVisibility(View.GONE);
+        floatingActionButton2.setVisibility(View.GONE);
+
 
 
         floatingActionButton1.setTranslationY(300);
@@ -234,6 +269,7 @@ public class LoginActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if(user!=null){
             startActivity(new Intent(this,PrincipalActivity.class));
+            progressDialog.dismiss();
         }else{
 
         }
@@ -254,7 +290,7 @@ public class LoginActivity extends AppCompatActivity {
         usernameS.trim();
         if(TextUtils.isEmpty(usernameS)){
             esValido=false;
-            username.setError("Campo Requerido");
+         //   username.setError("Campo Requerido");
         }
 
         passwordS.trim();
@@ -292,12 +328,22 @@ public class LoginActivity extends AppCompatActivity {
 
         if(validateForm(emailS,passS,emailS))
         {
+            progressDialog.setMessage("Login");
+            progressDialog.show();
+
+
             mAuth.signInWithEmailAndPassword(emailS,passS).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
+                        SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
+                        editor.putString("email" , emailS);
+                        editor.putString("password", passS);
+                        editor.putBoolean("isLogin",true);
+                        editor.apply();
                         updateUI(mAuth.getCurrentUser());
                     }else{
+                        progressDialog.dismiss();
                         Log.e(TAG,"Autentificación fallida: "+task.getException().toString());
                         Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrectos",Toast.LENGTH_LONG).show();
                         //Toast.makeText(LoginActivity.this, task.getException().toString(),Toast.LENGTH_LONG).show();

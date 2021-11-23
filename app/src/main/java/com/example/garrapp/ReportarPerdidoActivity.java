@@ -296,14 +296,13 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
 
     public void EnviarReporte(View v){
         myRef=database.getReference("Reportes").child("Perdido");
-        //myRef.setValue("Hello World");
 
-        String generoS=genero.getSelectedItem().toString();
+         String generoS=genero.getSelectedItem().toString();
         String razaS=raza.getSelectedItem().toString();
         String tamañoS= tamaño.getSelectedItem().toString();
         String descripcionS=descripcion.getText().toString();
         if (validateForm(generoS,razaS,tamañoS,descripcionS)){
-            //myRef=database.getReference(PATH_REPORTES+mAuth.getUid());
+           // myRef=database.getReference(PATH_REPORTES+mAuth.getUid());
             String key=myRef.push().getKey();
            // myRef=database.getReference(PATH_REPORTES+key);
 
@@ -312,7 +311,9 @@ public class ReportarPerdidoActivity extends AppCompatActivity {
             reporte.setRaza(razaS);
             reporte.setTamaño(tamañoS);
             reporte.setDescripción(descripcionS);
-            myRef.child(key).setValue(reporte);
+
+            myRef.child(mAuth.getUid()).child(key).setValue(reporte);
+
             //myRef.push().setValue(reporte);
             Log.d("Key" , key);
 
