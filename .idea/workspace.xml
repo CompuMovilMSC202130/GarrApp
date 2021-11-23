@@ -19,16 +19,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17b85da8-d920-4f06-8298-f6511a7e3ced" name="Default Changelist" comment="Despliegue de chats del usuario">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ResetPasswordActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ProfileFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/BlankFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ChatAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ChatAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/NoticiasActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/NoticiasActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/button_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_bg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_aliados.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_aliados.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_noticias.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_noticias.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,9 +142,6 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Utilidades.googleMaps" />
-    </key>
-    <key name="android.template.2112742942">
-      <recent name="com.example.garrapp" />
     </key>
   </component>
   <component name="RunManager">
@@ -422,14 +423,7 @@
       <option name="project" value="LOCAL" />
       <updated>1637614370057</updated>
     </task>
-    <task id="LOCAL-00031" summary="Cambio de aspecto chat">
-      <created>1637627810645</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1637627810645</updated>
-    </task>
-    <option name="localTasksCounter" value="32" />
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -482,8 +476,7 @@
     <MESSAGE value="Varios sin afectacion" />
     <MESSAGE value="Correccion manejo de indices reporte perdidos" />
     <MESSAGE value="Correccion manejo de Ingreso por Biometria Dactilar" />
-    <MESSAGE value="Cambio de aspecto chat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio de aspecto chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correccion manejo de Ingreso por Biometria Dactilar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -495,12 +488,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java</url>
-          <line>301</line>
+          <line>286</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java</url>
-          <line>300</line>
+          <line>285</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
