@@ -13,6 +13,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.garrapp.databinding.ActivityMapsBinding;
+import com.google.android.datatransport.cct.internal.LogEvent;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -61,11 +64,23 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.example.garrapp.utilidades.FetchURL;
 import com.example.garrapp.utilidades.TaskLoadedCallback;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.graphics.Color;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Currency;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, TaskLoadedCallback {
@@ -78,6 +93,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LatLng aLatLng = new LatLng(4.65, -74.05);
     LatLng destination;
     private Button ruta;
+    private int cambioRuta = 0;
+    private ImageButton marcador;
+    private int secondLeft = 6;
+    Timer timer = new Timer();
+    private DatabaseReference mDataBase;
 
     // botones de barra inferior
     BottomNavigationView bottomNavigationView;
@@ -97,8 +117,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     //Simple location Atributtes
     private FusedLocationProviderClient fusedLocationProviderClient;
+    DatabaseReference mDatabase;
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
+
     static final int REQUEST_CHECK_SETTINGS = 6;
     private final int RADIUS_OF_EARTH_KM = 6371;
     Polyline currentPolyline;
@@ -111,11 +133,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         locationRequest = createLocationRequest();
         locationCallback = createLocationCallback();
+
         myRequestPermission(this, locationPermission, "Access to GPS", PERMISSION_LOCATION);
 
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -128,28 +152,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.Reportes:
-                        startActivity(new Intent(getApplicationContext(),TusReportesActivity.class));
-                        overridePendingTransition(1,0);
+                        startActivity(new Intent(getApplicationContext(), TusReportesActivity.class));
+                        overridePendingTransition(1, 0);
                         return true;
 
                     case R.id.Listados:
-                        startActivity(new Intent(getApplicationContext(),ListadosActivity.class));
-                        overridePendingTransition(1,0);
+                        startActivity(new Intent(getApplicationContext(), ListadosActivity.class));
+                        overridePendingTransition(1, 0);
                         return true;
 
                     case R.id.Home:
-                        startActivity(new Intent(getApplicationContext(),PrincipalActivity.class));
-                        overridePendingTransition(1,0);
+                        startActivity(new Intent(getApplicationContext(), PrincipalActivity.class));
+                        overridePendingTransition(1, 0);
                         return true;
 
                     case R.id.Mapa:
                         return true;
 
                     case R.id.Noticias:
-                        startActivity(new Intent(getApplicationContext(),NoticiasActivity.class));
-                        overridePendingTransition(1,0);
+                        startActivity(new Intent(getApplicationContext(), NoticiasActivity.class));
+                        overridePendingTransition(1, 0);
                         return true;
                 }
 
@@ -168,6 +192,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Location
 
 
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -175,31 +201,114 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         ruta = (Button) findViewById(R.id.botonRuta);
+        marcador = (ImageButton) findViewById(R.id.idVeretinarias);
+
+        marcador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Marcadores();
+            }
+        });
 
         ruta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 generateRoute("driving");
+                countDownTimer();
             }
         });
+
+
     }
+
+
+    private void Marcadores(){
+        mDatabase.child("usuarios").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for(DataSnapshot snapshot: dataSnapshot.getChildren()){
+                        MapPojo mp = snapshot.getValue(MapPojo.class);
+                        Double latitud = mp.getLatitud();
+                        Double longitud = mp.getLongitud();
+                        String nombre = mp.getNombre();
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        mMap.addMarker(markerOptions.position(new LatLng(latitud,longitud)).title(nombre).icon(BitmapDescriptorFactory
+                                .defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+                     }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+    }
+
+
+    private void countDownTimer(){
+
+        new CountDownTimer(1000,1000){
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                    generateRoute("driving");
+                    countDownTimer();
+            }
+        }.start();
+
+    }
+
 
     /***********************************************************************************************
      *                                          Location Request
      **********************************************************************************************/
 
-    private LocationRequest createLocationRequest(){
+    private LocationRequest createLocationRequest() {
+
         LocationRequest locationRequest = LocationRequest.create()
                 .setInterval(10000)
                 .setFastestInterval(5000)
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         return locationRequest;
     }
+
     /***********************************************************************************************
      *                                          LocationCallback
      **********************************************************************************************/
 
-    private LocationCallback createLocationCallback(){
+
+    private SensorEventListener createSensorEventListener() {
+        SensorEventListener lightSensorListener = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                if (mMap != null) {
+                    if (sensorEvent.values[0] < 5000) {
+                        Log.i("MAPS", "DARK MAP " + sensorEvent.values[0]);
+                        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(MapsActivity.this, R.raw.dark_style_map));
+                    } else {
+                        Log.i("MAPS", "LIGHT MAP " + sensorEvent.values[0]);
+                        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(MapsActivity.this, R.raw.light_style_map));
+                    }
+                }
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {
+            }
+        };
+        return lightSensorListener;
+    }
+
+
+
+
+    private  LocationCallback createLocationCallback(){
 
         locationCallback = new LocationCallback() {
             @Override
@@ -208,7 +317,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Location location = locationResult.getLastLocation();
 
                 if(location != null){
-                    Log.i ( "TAG" , "location" + location.toString());
+                    //Log.i ( "TAG" , "location" + location.toString());
                     LatLng bogota = new LatLng(location.getLatitude(), location.getLongitude()); // Guardamos la posición
                     /************************  JSON***********************************************/
                     if (locationMarker == null){
@@ -243,33 +352,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return locationCallback;
     }
 
-
-
-    private SensorEventListener createSensorEventListener(){
-        SensorEventListener lightSensorListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-                if (mMap != null) {
-                    if (sensorEvent.values[0] <5000) {
-                        Log.i("MAPS", "DARK MAP " + sensorEvent.values[0]);
-                        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(MapsActivity.this, R.raw.dark_style_map));
-                    } else {
-                        Log.i("MAPS", "LIGHT MAP " + sensorEvent.values[0]);
-                        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(MapsActivity.this, R.raw.light_style_map));
-                    }
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {}
-        };
-        return lightSensorListener;
-    }
-
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
 
 
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
@@ -295,6 +381,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onResume() {
         super.onResume();
+        Log.e( "TAG","ONresume");
         checkSettingsLocation();
         sensorManager.registerListener(lightSensorListener, lightSensor,
                 SensorManager.SENSOR_DELAY_NORMAL);
@@ -309,6 +396,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void checkSettingsLocation() {
+
         LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder().addLocationRequest(locationRequest);
         SettingsClient client = LocationServices.getSettingsClient(this);
         Task<LocationSettingsResponse> task = client.checkLocationSettings(builder.build());
@@ -317,6 +405,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onSuccess(LocationSettingsResponse locationSettingsResponse) {
                 isGPSEnabled = true;
                 startLocationUpdate();
+
             }
         });
 
@@ -338,13 +427,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         break;
                     case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
                         // Location settings are not satisfied. No way to fix the settings so we won't show the dialog.
-
-
                         break;
                 }
             }
         });
     }
+
 
     private void startLocationUpdate(){
         if(ContextCompat.checkSelfPermission(this,
@@ -352,7 +440,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             if(isGPSEnabled){
                 fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null);
             }
-
         }
     }
 
@@ -425,22 +512,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         else {
             String address = searchByLocation(destination.latitude,destination.longitude);
             if (destination != null && mMap != null) {
-                if (searchMarker != null) {
-                    markers.remove(searchMarker);
-                    searchMarker.remove();
+                if(cambioRuta == 0){
+                    double distancia = distance(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude);
+                    Toast.makeText(this, "Distancia hasta el punto buscado: "+ distancia+ " Km", Toast.LENGTH_SHORT).show();
                 }
-                searchMarker = mMap.addMarker(new MarkerOptions().position(destination).title(address).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-                markers.add(searchMarker);
-                //zoomMarkers();
-                //mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
-
                 String url = getUrl(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude,transport);
                 new FetchURL(this).execute(url,transport);
-
-                double distancia = distance(destination.latitude,destination.longitude,locationMarker.getPosition().latitude,locationMarker.getPosition().longitude);
-                Toast.makeText(this, "Distancia hasta el punto buscado: "+distancia+ " Km", Toast.LENGTH_SHORT).show();
+                cambioRuta=1;
             }
         }
+
     }
 
 
@@ -458,6 +539,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return url;
     }
 
+
     /***********************************************************************************************
      **                                METODO QUE CALCULA LA DISTANCIA ENTRE DOS PUNTOS
      **********************************************************************************************/
@@ -471,16 +553,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return Math.round(result*100.0)/100.0;
     }
 
-
     /***********************************************************************************************
      **                                METODO QUE DIBUJA LA RUTA ENTRE DOS PUNTOS
      **********************************************************************************************/
+
 
     @Override
     public void onTaskDone(Object... values) {
         if( currentPolyline != null){
             currentPolyline.remove();
         }
+
         currentPolyline = mMap.addPolyline((PolylineOptions)values[0]);
         currentPolyline.setColor(Color.MAGENTA);
     }
