@@ -22,11 +22,11 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ultima_ubicacion_conocida">Última ubicación conocida</string>
+    <string name="ultima_ubicacion_conocida">Ubicación</string>
     <string name="camara">Cámara</string>
     <string name="galeria">Galería</string>
     <string name="adjuntar_foto_encontrado">Adjuntar foto del animal encontrado</string>
-    <string name="fijar_en_el_mapa">Fijar en el mapa</string>
+    <string name="fijar_en_el_mapa">Escribir dirección</string>
     <string name="ubicacion_encontrado">Ubicación donde se encontró</string>
     <string name="descripcion">Descripción</string>
     <string name="tamano">Tamaño</string>
@@ -42,7 +42,8 @@
     <string name="realizar_un_reporte">Realizar un reporte</string>
     <string name="mapa_garrapp">Mapa GarrApp</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum laoreet quam, ac iaculis tortor molestie rutrum. Praesent posuere consequat lacus, sed sagittis massa finibus sed. Mauris sit amet congue ligula, vel aliquet urna. Proin mollis, erat faucibus porttitor lobortis, erat velit hendrerit lacus, ac cursus neque sem id ante. Vivamus gravida sit amet diam sit amet molestie. Nam consequat in felis quis suscipit. Fusce tincidunt ex purus, eu vulputate ante laoreet non. Fusce fringilla fermentum eros, nec ullamcorper sem auctor quis.</string>
-
+    <string name="BottonAnimalesPerdidos">Animales perdidos</string>
+    <string name="BottonAnimalesEncontrados">Animales encontrados</string>
     <string-array name="tamanos">
         <item></item>
         <item>Pequeño</item>

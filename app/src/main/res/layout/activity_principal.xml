@@ -88,17 +88,6 @@
                         android:onClick="aliadosPressed"
                         android:text="@string/aliados" />
 
-                    <Button
-                        android:id="@+id/button2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/custom"
-                        android:drawableLeft="@drawable/ic_heart"
-                        android:drawableTint="@color/white"
-                        android:onClick="tusReportesPressed"
-                        android:text="@string/tus_reportes" />
                 </LinearLayout>
 
                 <LinearLayout

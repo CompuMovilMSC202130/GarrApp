@@ -63,13 +63,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barraSuperior">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:orientation="vertical"
             android:padding="10dp"
-            android:orientation="vertical">
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="59dp">
 
             <TextView
                 android:id="@+id/textView10"
@@ -189,19 +190,15 @@
 
 
 
-            <Button
-                android:id="@+id/btn_selec_Mapap"
+            <EditText
+                android:id="@+id/ubicacionp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/fijar_en_el_mapa"
                 android:minHeight="48dp"
-                android:paddingStart="20dp"
-                android:drawableLeft="@drawable/ic_map"
-                android:backgroundTint="@color/custom"
-                android:drawableTint="@color/white"
-                android:text="@string/fijar_en_el_mapa"
-                android:textAllCaps="false"/>
-
-
+                android:paddingStart="20dp" />
 
 
             <TextView
@@ -218,40 +215,52 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:background="@drawable/edit_text_bg"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
 
 
                 <ImageView
                     android:id="@+id/imageViewFotoPerdido"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:padding="10dp"
                     android:layout_weight="1"
+                    android:padding="10dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/ic_heart" />
 
-
-                <Button
-                    android:id="@+id/btn_selec_Imgp"
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="20dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/custom"
-                    android:drawableLeft="@drawable/ic_image"
-                    android:drawableTint="@color/white"
-                    android:minHeight="48dp"
-                    android:onClick="EnviarReporte"
-                    android:text="@string/galeria"
-                    android:textAllCaps="false" />
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_selec_Imgp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@color/custom"
+                        android:drawableLeft="@drawable/ic_image"
+                        android:drawableTint="@color/white"
+                        android:minHeight="48dp"
+                        android:text="@string/galeria"
+                        android:textAllCaps="false" />
 
 
+                    <Button
+                        android:id="@+id/button_open_camerap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@color/custom"
+                        android:drawableLeft="@drawable/ic_camera"
+                        android:drawableTint="@color/white"
+                        android:minHeight="48dp"
+                        android:text="@string/camara"
+                        android:textAllCaps="false" />
 
-
-
+                </LinearLayout>
 
 
             </LinearLayout>

@@ -11,6 +11,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MyFirebaseMsgService" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -19,14 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17b85da8-d920-4f06-8298-f6511a7e3ced" name="Default Changelist" comment="Marcacion de la ruta">
+      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/garrapp/MapPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/garrapp/MapPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/garrapp/MapPojo.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/garrapp/MapPojo.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ListadosActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ListadosActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/Model/Animals.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/Model/Animals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/PerdidosFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/PerdidosFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ReportarEncontradoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ReportarEncontradoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ReportarPerdidoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/ReportarPerdidoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/Reporte.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/garrapp/Reporte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reportar_encontrado.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reportar_encontrado.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reportar_perdido.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reportar_perdido.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_encontrados.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_encontrados.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_perdidos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_perdidos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\diego\.android\avd\Pixel_4_API_29.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Julian\.android\avd\Pixel_2_API_26.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,8 +82,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -98,8 +116,6 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WORKMANAGER_INSPECTOR_NOTIFICATION_DISMISSED" value="true" />
-    <property name="android-custom-viewC:/Users/Milo/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.4.0/51035a8f6342c20d4d8f242d100e6f25e0c271ac/material-1.4.0-sources.jar!/com/google/android/material/floatingactionbutton/FloatingActionButton.java_FloatingActionButton_DIMENSIONS" value="1080&#10;1920" />
-    <property name="android-custom-viewC:/Users/Milo/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.4.0/51035a8f6342c20d4d8f242d100e6f25e0c271ac/material-1.4.0-sources.jar!/com/google/android/material/floatingactionbutton/FloatingActionButton.java_SELECTED" value="FloatingActionButton" />
     <property name="android-custom-viewC:/Users/ariel/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.4.0/51035a8f6342c20d4d8f242d100e6f25e0c271ac/material-1.4.0-sources.jar!/com/google/android/material/navigation/NavigationBarView.java_NavigationBarView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/ariel/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.4.0/51035a8f6342c20d4d8f242d100e6f25e0c271ac/material-1.4.0-sources.jar!/com/google/android/material/navigation/NavigationBarView.java_SELECTED" value="NavigationBarView" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
@@ -399,21 +415,7 @@
       <option name="project" value="LOCAL" />
       <updated>1637532838248</updated>
     </task>
-    <task id="LOCAL-00029" summary="Correccion manejo de indices reporte perdidos">
-      <created>1637598038242</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1637598038242</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Correccion manejo de Ingreso por Biometria Dactilar">
-      <created>1637614370057</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1637614370057</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,9 +466,7 @@
     <MESSAGE value="fingerPrint login" />
     <MESSAGE value="Chat con firebase V1" />
     <MESSAGE value="Varios sin afectacion" />
-    <MESSAGE value="Correccion manejo de indices reporte perdidos" />
-    <MESSAGE value="Correccion manejo de Ingreso por Biometria Dactilar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion manejo de Ingreso por Biometria Dactilar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Varios sin afectacion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -476,17 +476,22 @@
           <line>59</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java</url>
-          <line>286</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/garrapp/LoginActivity.java</url>
-          <line>285</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="snapshot" />
+        <watch expression="myRef" />
+        <watch expression="dataSnapshot" />
+        <watch expression="descripcion" />
+        <watch expression="PerdidosList" />
+        <watch expression="genperdidos1" />
+        <watch expression="texto" />
+        <watch expression="PerdidosFotosList" />
+        <watch expression="cargarIDReportes()" />
+        <watch expression="position" />
+        <watch expression="tabLayout" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

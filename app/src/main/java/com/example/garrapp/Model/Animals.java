@@ -1,7 +1,6 @@
 package com.example.garrapp.Model;
 
 public class Animals {
-    private String especie;
     private String genero;
     private String raza;
     private String tamaño;
@@ -14,7 +13,6 @@ public class Animals {
     public Animals(String especie, String genero ,String raza  ,String tamaño,
                    String descripcion, String ultUbicacion, String imgAnimals){
 
-        this.especie = especie;
         this.genero = genero;
         this.raza = raza;
         this.tamaño = tamaño;
@@ -22,14 +20,6 @@ public class Animals {
         this.ultUbicacion = ultUbicacion;
         this.imgAnimals = imgAnimals;
 
-    }
-
-    public String getEspecie() {
-        return especie;
-    }
-
-    public void setEspecie(String especie) {
-        this.especie = especie;
     }
 
     public String getGenero() {

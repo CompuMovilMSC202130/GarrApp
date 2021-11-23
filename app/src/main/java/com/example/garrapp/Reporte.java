@@ -1,23 +1,20 @@
 package com.example.garrapp;
 
 public class Reporte {
-    String Especie;
     String Genero;
     String Raza;
     String Tamaño;
     String Descripción;
+    String FotoURL;
+    String Ubicacion;
 
     public Reporte() {
 
     }
 
-    public String getEspecie() {
-        return Especie;
+    public Reporte(String genero, String raza, String tamaño, String descripcion, String fotoURL) {
     }
 
-    public void setEspecie(String especie) {
-        Especie = especie;
-    }
 
     public String getGenero() {
         return Genero;
@@ -47,7 +44,21 @@ public class Reporte {
         return Descripción;
     }
 
-    public void setDescripción(String descripción) {
-        Descripción = descripción;
+    public void setDescripción(String descripcion) { Descripción = descripcion; }
+
+    public String getFotoURL() {
+        return FotoURL;
+    }
+
+    public void setFotoURL(String fotoURL) {
+        FotoURL = fotoURL;
+    }
+
+    public String getUbicacion() {
+        return Ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        Ubicacion = ubicacion;
     }
 }

@@ -31,6 +31,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/imgperdidos1"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:padding="20dp"
@@ -47,35 +48,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/especie" />
-
-                    <TextView
+                        android:id="@+id/genperdidos1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/genero" />
 
                     <TextView
+                        android:id="@+id/razaperdidos1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/raza" />
 
                     <TextView
+                        android:id="@+id/tamanoperdidos1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/tamano" />
 
                     <TextView
+                        android:id="@+id/desperdidos1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/descripcion" />
                     <TextView
+                        android:id="@+id/ubiperdidos1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -94,6 +94,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/imgperdidos2"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:padding="20dp"
@@ -110,35 +111,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/especie" />
-
-                    <TextView
+                        android:id="@+id/genperdidos2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/genero" />
 
                     <TextView
+                        android:id="@+id/razaperdidos2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/raza" />
 
                     <TextView
+                        android:id="@+id/tamanoperdidos2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/tamano" />
 
                     <TextView
+                        android:id="@+id/desperdidos2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/descripcion" />
                     <TextView
+                        android:id="@+id/ubiperdidos2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -157,6 +157,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/imgperdidos3"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:padding="20dp"
@@ -173,35 +174,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/especie" />
-
-                    <TextView
+                        android:id="@+id/genperdidos3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/genero" />
 
                     <TextView
+                        android:id="@+id/razaperdidos3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/raza" />
 
                     <TextView
+                        android:id="@+id/tamanoperdidos3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/tamano" />
 
                     <TextView
+                        android:id="@+id/desperdidos3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/descripcion" />
                     <TextView
+                        android:id="@+id/ubiperdidos3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -220,6 +220,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/imgperdidos4"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:padding="20dp"
@@ -236,35 +237,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/especie" />
-
-                    <TextView
+                        android:id="@+id/genperdidos4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/genero" />
 
                     <TextView
+                        android:id="@+id/razaperdidos4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/raza" />
 
                     <TextView
+                        android:id="@+id/tamanoperdidos4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/tamano" />
 
                     <TextView
+                        android:id="@+id/desperdidos4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/descripcion" />
                     <TextView
+                        android:id="@+id/ubiperdidos4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -283,7 +283,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imgperdidos5"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:padding="20dp"
@@ -300,35 +300,34 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/especie" />
-
-                    <TextView
+                        android:id="@+id/genperdidos5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/genero" />
 
                     <TextView
+                        android:id="@+id/razaperdidos5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/raza" />
 
                     <TextView
+                        android:id="@+id/tamanoperdidos5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/tamano" />
 
                     <TextView
+                        android:id="@+id/desperdidos5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/descripcion" />
                     <TextView
+                        android:id="@+id/ubiperdidos5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
