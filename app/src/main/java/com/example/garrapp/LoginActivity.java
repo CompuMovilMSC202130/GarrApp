@@ -406,10 +406,12 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()){
                                     Toast.makeText(LoginActivity.this, "Registro existoso, por favor inicie sesión", Toast.LENGTH_SHORT).show();
+                                    mAuth.signOut();
                                     Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                     startActivity(intent);
                                     finish();
+
                                 }
                             }
                         });
@@ -429,6 +431,15 @@ public class LoginActivity extends AppCompatActivity {
                 email.length() < 6)
             return false;
         return true;
+    }
+
+    public void Salir(View v){
+        //cierre sesion
+        mAuth.signOut();
+        //UpdateUi
+        Intent intent=new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 }
