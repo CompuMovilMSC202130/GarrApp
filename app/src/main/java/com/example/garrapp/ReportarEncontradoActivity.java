@@ -142,10 +142,10 @@ public class ReportarEncontradoActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                /*FcmNotificationsSender notificationsSender = new FcmNotificationsSender("/topics/all"," \uD83D\uDC36 Se ha realizado un nuevo reporte",
-                        " Milo se ha perdido :(  Ayudanos a encontrarlo ...", getApplicationContext(),ReportarEncontradoActivity.this);
+                FcmNotificationsSender notificationsSender = new FcmNotificationsSender("/topics/all"," \uD83D\uDC36 Se ha realizado un nuevo reporte",
+                        " Ingresa a la aplicación", getApplicationContext(),ReportarEncontradoActivity.this);
 
-                notificationsSender.SendNotifications();*/
+                notificationsSender.SendNotifications();
 
                 EnviarReporte(view);
             }
