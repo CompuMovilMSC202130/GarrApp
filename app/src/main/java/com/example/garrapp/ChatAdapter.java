@@ -18,6 +18,8 @@ public class ChatAdapter extends FragmentStateAdapter {
         switch (position){
             case 1:
                 return new ChatUsersFragment();
+            case 2:
+                return new ProfileFragment();
         }
         return new ChatMessFragment();
 
@@ -25,6 +27,6 @@ public class ChatAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }

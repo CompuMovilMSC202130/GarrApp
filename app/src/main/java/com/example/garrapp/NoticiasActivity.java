@@ -153,6 +153,7 @@ public class NoticiasActivity extends AppCompatActivity {
 
         tabLayout.addTab(tabLayout.newTab().setText("Chats"));
         tabLayout.addTab(tabLayout.newTab().setText("Usuarios"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tu perfil"));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

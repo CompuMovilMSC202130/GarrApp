@@ -53,6 +53,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-core'
+    implementation 'com.google.firebase:firebase-storage'
+    // ultimo para el perfil en el chat
 
 
     implementation 'androidx.work:work-runtime:2.5.0'
