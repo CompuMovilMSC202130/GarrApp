@@ -397,6 +397,9 @@ public class LoginActivity extends AppCompatActivity {
                         hashMap.put(Constants.KEY_EMAIL , emailS);
                         hashMap.put(Constants.KEY_PASSWORD , passS);
                         hashMap.put("imageURL", "default");
+                        hashMap.put("status", "offline");
+                        hashMap.put("search", usernameS.toLowerCase());
+
 
                         reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override

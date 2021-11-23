@@ -14,7 +14,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/profile_image"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,6 +26,14 @@
             android:textSize="18sp"
             android:textColor="@color/white"
             android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_seen"
+            android:layout_below="@+id/show_message"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
 
