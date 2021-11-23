@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -43,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     LoginAdapter adapter;
     FloatingActionButton floatingActionButton2, floatingActionButton1, floatingActionButton3;
     float v =0;
+
 
 
 
@@ -71,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     SharedPreferences sharedPreference;
 
+    TextView forgotpassword;
+
 
 
     @Override
@@ -88,6 +92,17 @@ public class LoginActivity extends AppCompatActivity {
         floatingActionButton1 = findViewById( R.id.floatingActionButton1);
         floatingActionButton2 = findViewById( R.id.floatingActionButton2);
         floatingActionButton3 = findViewById( R.id.floatingActionButton3);
+
+
+        // reset password
+        forgotpassword = findViewById(R.id.forgot_password);
+
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
+            }
+        });
 
         /****************************  FingerPrint************************************************/
 

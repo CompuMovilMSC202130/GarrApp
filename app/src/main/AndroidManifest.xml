@@ -23,6 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarrAPP">
         <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false"/>
+        <activity
             android:name=".MessageActivity"
             android:exported="false" />
         <activity
